@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Backtest Empates 2025-26 · Rendimiento</title>
+<style>
+  :root{--bg:#0d1117;--panel:#161b22;--line:#2a3140;--txt:#e6edf3;--mut:#9aa7b8;
+    --pos:#3fb950;--neg:#f85149;--accent:#58a6ff;--warn:#e3b341;--it:#0f74b8;--nl:#e77f00;--es:#c8102e;}
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--txt);
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;line-height:1.5}
+  .wrap{max-width:880px;margin:0 auto;padding:34px 15px 70px}
+  h1{font-size:24px;margin:0 0 4px}
+  .sub{color:var(--mut);font-size:13.5px;margin-bottom:22px}
+  h2{font-size:16px;margin:30px 0 10px;display:flex;align-items:center;gap:8px}
+  .hero{background:linear-gradient(135deg,#12331d,#161b22);border:1px solid #234a2e;border-radius:16px;
+    padding:20px 22px;margin:8px 0 6px;text-align:center}
+  .hero .big{font-size:clamp(38px,10vw,58px);font-weight:800;color:var(--pos);line-height:1;letter-spacing:-1px}
+  .hero .cap{color:var(--mut);font-size:13px;margin-top:6px}
+  .kpis{display:flex;flex-wrap:wrap;gap:10px;margin:16px 0 4px}
+  .kpi{flex:1;min-width:150px;background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:13px 15px}
+  .kpi .l{color:var(--mut);font-size:11px;text-transform:uppercase;letter-spacing:.05em}
+  .kpi .v{font-size:22px;font-weight:800;margin-top:3px}
+  .kpi .v.pos{color:var(--pos)}
+  .scroll{overflow-x:auto;border:1px solid var(--line);border-radius:12px;margin-top:6px}
+  table{width:100%;border-collapse:collapse;font-size:13px;min-width:460px}
+  th,td{padding:10px 12px;border-bottom:1px solid #1c232e;text-align:right}
+  th:first-child,td:first-child{text-align:left}
+  th{color:var(--mut);font-size:11px;text-transform:uppercase;letter-spacing:.04em;background:#121824}
+  tr:last-child td{border-bottom:none}
+  td.team{font-weight:700;white-space:nowrap;background:#11161d}
+  .pos{color:var(--pos)}.neg{color:var(--neg)}
+  tfoot td{font-weight:800;background:#0f1620;border-top:2px solid var(--line)}
+  .fl{display:inline-block;color:#fff;font-size:10px;font-weight:800;border-radius:5px;padding:2px 7px}
+  .flit{background:var(--it)}.flnl{background:var(--nl)}.fles{background:var(--es)}
+  .box{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:14px 16px;font-size:13px;color:#d7e0ea;margin-top:14px}
+  .box b{color:#fff}
+  .note{color:var(--mut);font-size:12px;margin-top:8px;padding:0 2px}
+  .avoid{color:var(--neg);font-weight:700}
+  footer{color:#6b7686;font-size:12px;margin-top:40px;border-top:1px solid var(--line);padding-top:14px}
+  .tag{display:inline-block;font-size:10px;font-weight:700;padding:2px 7px;border-radius:6px;background:#1a2430;color:var(--mut);margin-left:6px}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <h1>📊 Backtest Empates — Temporada 2025-26</h1>
+  <div class="sub">Estrategia martingala sobre empates · base $100 · ×1.5 · meta 5 empates · momio ≥ 3.00 · resultados reales de temporada completa</div>
+
+  <div class="hero">
+    <div class="big">+$76,980</div>
+    <div class="cap">Empate por equipo · 3 ligas a roster completo (todos los medios, sin los grandes) · base $100</div>
+  </div>
+
+  <div class="kpis">
+    <div class="kpi"><div class="l">Ligas</div><div class="v">3</div></div>
+    <div class="kpi"><div class="l">Equipos seguidos</div><div class="v">49</div></div>
+    <div class="kpi"><div class="l">Apuesta máxima</div><div class="v">$3,848</div></div>
+  </div>
+
+  <h2>1 · Empate por equipo — combinado 3 ligas</h2>
+  <div class="note">Cada liga con todos sus equipos medios; se excluyen solo los 3 grandes de cada una (los que casi nunca empatan).</div>
+  <div class="scroll">
+  <table>
+    <thead><tr><th>Liga</th><th>Equipos</th><th>Balance</th></tr></thead>
+    <tbody>
+      <tr><td class="team"><span class="fl flnl">NED</span> Eredivisie</td><td>15</td><td class="pos">+$25,255</td></tr>
+      <tr><td class="team"><span class="fl flit">ITA</span> Serie A</td><td>17</td><td class="pos">+$21,641</td></tr>
+      <tr><td class="team"><span class="fl fles">ESP</span> LaLiga</td><td>17</td><td class="pos">+$30,084</td></tr>
+    </tbody>
+    <tfoot><tr><td>Total por equipo</td><td>49</td><td class="pos">+$76,980</td></tr></tfoot>
+  </table>
+  </div>
+
+  <h2>2 · Qué equipos entran y cuáles se evitan</h2>
+  <div class="scroll">
+  <table>
+    <thead><tr><th>Liga</th><th>Se sigue</th><th>Se excluye / evita</th></tr></thead>
+    <tbody>
+      <tr><td class="team"><span class="fl flnl">NED</span> Eredivisie</td><td style="text-align:left">15 equipos medios</td><td style="text-align:left"><span class="avoid">PSV · Ajax · Feyenoord</span></td></tr>
+      <tr><td class="team"><span class="fl flit">ITA</span> Serie A</td><td style="text-align:left">17 equipos medios</td><td style="text-align:left"><span class="avoid">Inter · Napoli · Juventus</span></td></tr>
+      <tr><td class="team"><span class="fl fles">ESP</span> LaLiga</td><td style="text-align:left">17 equipos medios</td><td style="text-align:left"><span class="avoid">Real Madrid · Barcelona · Atlético</span></td></tr>
+    </tbody>
+  </table>
+  </div>
+  <div class="note">A los grandes no se les sigue (casi no empatan) y además <b>no se apuesta</b> cuando un equipo medio los enfrenta como líder — se salta ese partido y la progresión de ese equipo se congela hasta su próximo partido apostable.</div>
+
+  <h2>3 · Estrategia extra — empate por jornada (España) <span class="tag">opcional, aparte</span></h2>
+  <div class="box">
+    Es una estrategia <b>distinta</b> a la de por equipo: apuestas al empate de la jornada (2 empates por jornada, 1 a la vez, filtro anti-grandes). En el backtest 2025-26 sumó <b class="pos">+$20,597</b> por su cuenta. Si la corres <b>además</b> del por-equipo, el combinado sube a ≈ <b class="pos">+$97,577</b>.
+  </div>
+
+  <h2>4 · Lecturas importantes</h2>
+  <div class="box">
+    Todo es <b>backtest de la temporada 2025-26 completa</b> con base $100. Escala lineal: base $200 duplica todo (balance y apuesta máxima), base $300 lo triplica, etc. El pico de exposición del bank es la <b>apuesta máxima ($3,848)</b>, que corresponde a la racha larga de un solo equipo antes de empatar — es lo que tu bank tiene que poder cubrir. Los picos de cada liga no coinciden en el tiempo, así que el bank real necesario es menor que la suma de picos. Esto <b>no es una promesa</b> de resultado futuro: es lo que habría rendido la estrategia aplicada a esa temporada.
+  </div>
+
+  <footer>
+    Backtest sobre resultados reales 2025-26 · empate por equipo (Eredivisie + Serie A + LaLiga, roster completo) + empate por jornada (España, opcional).
+    Las probabilidades y proyecciones son estimaciones; ninguna apuesta es segura. Juega con responsabilidad.
+  </footer>
+</div>
+</body>
+</html>
