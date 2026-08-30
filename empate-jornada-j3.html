@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Empate por Jornada · España · J3</title>
+<style>
+  :root{--bg:#0d1117;--panel:#161b22;--line:#2a3140;--txt:#e6edf3;--mut:#9aa7b8;
+    --pos:#3fb950;--neg:#f85149;--accent:#58a6ff;--warn:#e3b341;--es:#c8102e;}
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--txt);
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;line-height:1.45}
+  .wrap{max-width:880px;margin:0 auto;padding:22px 14px 70px}
+  h1{font-size:22px;margin:8px 0 4px}
+  .sub{color:var(--mut);font-size:13px;margin-bottom:14px}
+  .kpis{display:flex;flex-wrap:wrap;gap:9px;margin:0 0 8px}
+  .kpi{background:var(--panel);border:1px solid var(--line);border-radius:11px;padding:9px 13px;font-size:12.5px}
+  .kpi b{font-size:17px;display:block;margin-top:2px}
+  .scroll{overflow-x:auto;border:1px solid var(--line);border-radius:12px;margin-top:6px}
+  table{width:100%;border-collapse:collapse;font-size:12.5px;min-width:560px}
+  th,td{padding:9px 10px;border-bottom:1px solid #1c232e;text-align:center}
+  th{color:var(--mut);font-size:10.5px;text-transform:uppercase;letter-spacing:.03em;background:#121824}
+  td.match{text-align:left;font-weight:600;white-space:nowrap}
+  td.when{color:var(--mut);font-size:11px;white-space:nowrap}
+  .bet{background:rgba(88,166,255,.06)} .skip{color:#6b7686}
+  .m{font-weight:700} .amt{color:var(--accent);font-weight:800}
+  .pe{font-variant-numeric:tabular-nums}
+  .legend{display:flex;gap:14px;flex-wrap:wrap;font-size:11.5px;color:var(--mut);margin:14px 0}
+  .legend b{color:var(--txt)}
+  .box{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:13px 15px;font-size:12.5px;margin-top:14px}
+  .box b{color:#fff}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <nav style="display:flex;flex-wrap:wrap;gap:6px;margin-bottom:14px;font-size:12.5px">
+    <a href="index.html" style="padding:6px 11px;border:1px solid #2a3140;border-radius:8px;text-decoration:none;color:#9aa7b8;background:#161b22">🏠 Inicio</a>
+    <a href="seguimiento-esp.html" style="padding:6px 11px;border:1px solid #2a3140;border-radius:8px;text-decoration:none;color:#9aa7b8;background:#161b22">🇪🇸 5 equipos</a>
+    <a href="empate-jornada-j3.html" style="padding:6px 11px;border:1px solid #3fb950;border-radius:8px;text-decoration:none;color:#fff;background:#12331d;font-weight:700">🎯 Por jornada</a>
+    <a href="seguimiento-3ligas.html" style="padding:6px 11px;border:1px solid #2a3140;border-radius:8px;text-decoration:none;color:#9aa7b8;background:#161b22">🟩 3 ligas</a>
+  </nav>
+
+  <h1><span style="color:var(--es)">🎯</span> Empate por Jornada — España · J3</h1>
+  <div class="sub">LaLiga 2026-27 · Jornada 3 (28–31 ago) · buscar 2 empates recorriendo los partidos en orden · Martingala base $100 ×2 · filtro anti-grandes</div>
+
+  <div class="kpis">
+    <span class="kpi">Meta<b>2 empates</b></span>
+    <span class="kpi">Base<b>$100</b></span>
+    <span class="kpi">Se apuestan<b>7</b></span>
+    <span class="kpi">Se saltan<b>3</b></span>
+  </div>
+
+  <div class="box" style="margin-bottom:6px">
+    <b>Cómo funciona:</b> recorres los 10 partidos <b>en orden de fecha y hora</b> apostando el empate de <b>uno a la vez</b>. Si el partido empata → cobras y reinicias a $100; si no → el siguiente partido apostable va al <b>doble</b> ($200, $400…). Te detienes al <b>cobrar 2 empates</b>. <b>Filtro anti-grandes:</b> se saltan Barcelona, Real Madrid y Atlético (en la J3 ninguno juega entre sí → los tres se saltan).
+  </div>
+
+  <div class="scroll">
+  <table>
+    <thead><tr><th>#</th><th style="text-align:left">Partido</th><th>Día/Hora</th><th>Prob. empate</th><th>Monto (×2, peor caso)</th><th>Acción</th></tr></thead>
+    <tbody>
+      <tr class="bet"><td>1</td><td class="match">Racing vs Elche</td><td class="when">Vie 28 · 19:00</td><td class="pe">30%</td><td><span class="amt">$100</span></td><td class="m" style="color:var(--accent)">✅ apostar</td></tr>
+      <tr class="bet"><td>2</td><td class="match">Alavés vs Villarreal</td><td class="when">Vie 28 · 21:30</td><td class="pe">31%</td><td><span class="amt">$200</span></td><td class="m" style="color:var(--accent)">✅ apostar</td></tr>
+      <tr class="bet"><td>3</td><td class="match">Levante vs Betis</td><td class="when">Sáb 29 · 17:00</td><td class="pe">29%</td><td><span class="amt">$400</span></td><td class="m" style="color:var(--accent)">✅ apostar</td></tr>
+      <tr class="bet"><td>4</td><td class="match">Real Sociedad vs Espanyol</td><td class="when">Sáb 29 · 19:00</td><td class="pe">30%</td><td><span class="amt">$800</span></td><td class="m" style="color:var(--accent)">✅ apostar</td></tr>
+      <tr><td class="skip">—</td><td class="match skip">Sevilla vs Atlético</td><td class="when">Sáb 29 · 21:30</td><td class="pe skip">28%</td><td class="skip">⊘</td><td class="m skip">⛔ saltar (Atlético)</td></tr>
+      <tr><td class="skip">—</td><td class="match skip">Real Madrid vs Málaga</td><td class="when">Dom 30 · 17:00</td><td class="pe skip">12%</td><td class="skip">⊘</td><td class="m skip">⛔ saltar (Madrid)</td></tr>
+      <tr class="bet"><td>5</td><td class="match">Deportivo vs Valencia</td><td class="when">Dom 30 · 19:30</td><td class="pe">31%</td><td><span class="amt">$1,600</span></td><td class="m" style="color:var(--accent)">✅ apostar</td></tr>
+      <tr class="bet"><td>6</td><td class="match">Celta vs Athletic</td><td class="when">Dom 30 · 21:30</td><td class="pe">30%</td><td><span class="amt">$3,200</span></td><td class="m" style="color:var(--accent)">✅ apostar</td></tr>
+      <tr class="bet"><td>7</td><td class="match">Osasuna vs Getafe</td><td class="when">Lun 31 · 19:30</td><td class="pe">31%</td><td><span class="amt">$6,400</span></td><td class="m" style="color:var(--accent)">✅ apostar</td></tr>
+      <tr><td class="skip">—</td><td class="match skip">Barcelona vs Rayo</td><td class="when">Lun 31 · 21:30</td><td class="pe skip">15%</td><td class="skip">⊘</td><td class="m skip">⛔ saltar (Barça)</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <div class="legend">
+    <span><b style="color:var(--accent)">✅</b> se apuesta el empate</span>
+    <span><b class="skip">⛔</b> se salta (gran equipo)</span>
+    <span><b style="color:var(--accent)">$</b> monto si vienes perdiendo todos los anteriores</span>
+  </div>
+
+  <div class="box">
+    <b>Ojo con la columna de monto:</b> muestra el <b>peor caso</b> (que no empate ninguno antes). En cuanto un partido empata, <b>reinicias a $100</b> y sigues contando hasta el 2º empate. Con 7 oportunidades a ~30% cada una, cobrar 2 empates es muy probable; el riesgo real es una racha de no-empates que dispare el monto (por eso $6,400 en el peor de los casos del último partido).<br><br>
+    <b>Mejores candidatos a empate de la jornada:</b> Celta–Athletic, Real Sociedad–Espanyol y Racing–Elche (equipos empatadores / choques parejos). Osasuna–Getafe también, por ser dos de los ataques más pobres.<br><br>
+    En la J2 esta estrategia cerró con los 2 empates y <b>+$960</b>. Mándame los resultados en orden y te marco cuál empató, el monto que tocó y el balance de la J3.
+  </div>
+</div>
+</body>
+</html>
