@@ -11,7 +11,6 @@
   body{margin:0;background:var(--bg);color:var(--txt);
     font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;line-height:1.45}
   .wrap{max-width:880px;margin:0 auto;padding:30px 14px 70px}
-  a.back{color:#6b7686;text-decoration:none;font-size:12.5px}
   h1{font-size:22px;margin:8px 0 4px}
   .sub{color:var(--mut);font-size:13px;margin-bottom:16px}
   .kpis{display:flex;flex-wrap:wrap;gap:9px;margin:0 0 8px}
@@ -33,6 +32,8 @@
   .legend b{color:var(--txt)}
   .box{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:13px 15px;font-size:12.5px;margin-top:14px}
   .box b{color:#fff}
+  .alert{background:#2a0d0d;border:1px solid #6b1e1e;color:#ffb3ad}
+  .alert b{color:#fff}
   h2{font-size:15px;margin:24px 0 8px}
   .nextlist{list-style:none;padding:0;margin:0}
   .nextlist li{display:flex;justify-content:space-between;gap:10px;padding:9px 12px;border:1px solid var(--line);border-radius:10px;margin-bottom:7px;background:var(--panel);font-size:13px}
@@ -53,10 +54,10 @@
   <div class="sub">Empate por equipo · LaLiga 2026-27 · base $100 · progresión ×2 · reinicia al empatar · orden real de fechas</div>
 
   <div class="kpis">
-    <span class="kpi">Balance por equipo<b class="loss" style="color:var(--neg)">−$190</b></span>
-    <span class="kpi">En juego (abiertas)<b style="color:var(--warn)">$1,100</b></span>
-    <span class="kpi">Bank (con ExJ)<b>$10,770</b></span>
-    <span class="kpi">Si empatan las 4<b class="win" style="color:var(--pos)">+$2,715</b></span>
+    <span class="kpi">Balance por equipo<b class="loss" style="color:var(--neg)">−$1,290</b></span>
+    <span class="kpi">En juego (abiertas)<b style="color:var(--warn)">$1,900</b></span>
+    <span class="kpi">Bank total (con por-jornada)<b class="loss" style="color:var(--neg)">−$3,030</b></span>
+    <span class="kpi">Si empatan todas<b class="win" style="color:var(--pos)">+$4,360</b></span>
   </div>
 
   <div class="scroll">
@@ -68,35 +69,35 @@
         <td class="none"><span class="ord">1º</span><div class="cc"><span class="m">—</span><span class="tg">15-ago · no reg.</span></div></td>
         <td class="win"><span class="ord">2º</span><div class="cc"><span class="m">$100</span><span class="tg">✅ vs Alavés +$200</span></div></td>
         <td class="omit"><span class="ord">3º</span><div class="cc"><span class="m">⊘</span><span class="tg">@ Barça (líder)</span></div></td>
-        <td class="next"><span class="ord">4º</span><div class="cc"><span class="m">$100</span><span class="tg">⏳ vs Racing 5-sep</span></div></td>
+        <td class="bet"><span class="ord">4º</span><div class="cc"><span class="m">$100</span><span class="tg">🎫 vs Racing 5-sep</span></div></td>
       </tr>
       <tr>
         <td class="team">Alavés</td>
         <td class="none"><span class="ord">1º</span><div class="cc"><span class="m">—</span><span class="tg">15-ago · no reg.</span></div></td>
         <td class="win"><span class="ord">2º</span><div class="cc"><span class="m">$100</span><span class="tg">✅ vs Rayo +$210</span></div></td>
-        <td class="bet"><span class="ord">3º</span><div class="cc"><span class="m">$100</span><span class="tg">🎫 vs Villarreal 28-ago</span></div></td>
-        <td class="none"><div class="cc"><span class="m">·</span></div></td>
+        <td class="loss"><span class="ord">3º</span><div class="cc"><span class="m">$100</span><span class="tg">❌ vs Villarreal (1-0) −$100</span></div></td>
+        <td class="bet"><span class="ord">4º</span><div class="cc"><span class="m">$200</span><span class="tg">🎫 vs Osasuna 6-sep</span></div></td>
       </tr>
       <tr>
         <td class="team">Sevilla</td>
         <td class="none"><span class="ord">1º</span><div class="cc"><span class="m">—</span><span class="tg">15-ago · no reg.</span></div></td>
         <td class="loss"><span class="ord">2º</span><div class="cc"><span class="m">$200</span><span class="tg">❌ @ Athletic −$200</span></div></td>
-        <td class="bet"><span class="ord">3º</span><div class="cc"><span class="m">$400</span><span class="tg">🎫 vs Atlético 29-ago</span></div></td>
-        <td class="none"><div class="cc"><span class="m">·</span></div></td>
+        <td class="loss"><span class="ord">3º</span><div class="cc"><span class="m">$400</span><span class="tg">❌ vs Atlético (1-3) −$400</span></div></td>
+        <td class="bet"><span class="ord">4º</span><div class="cc"><span class="m">$800</span><span class="tg">🎫 @ Espanyol 6-sep</span></div></td>
       </tr>
       <tr>
         <td class="team">Real Betis</td>
         <td class="loss"><span class="ord">2º</span><div class="cc"><span class="m">$200</span><span class="tg">❌ @ Valencia −$200</span></div></td>
         <td class="loss"><span class="ord">1º</span><div class="cc"><span class="m">$100</span><span class="tg">❌ vs R.Soc −$100</span></div></td>
-        <td class="bet"><span class="ord">3º</span><div class="cc"><span class="m">$400</span><span class="tg">🎫 vs Levante 29-ago</span></div></td>
-        <td class="omit"><div class="cc"><span class="m">⊘</span><span class="tg">vs R.Madrid (líder)</span></div></td>
+        <td class="loss"><span class="ord">3º</span><div class="cc"><span class="m">$400</span><span class="tg">❌ @ Levante (5-2) −$400</span></div></td>
+        <td class="omit"><div class="cc"><span class="m">⊘</span><span class="tg">vs R.Madrid → $800 a J5</span></div></td>
       </tr>
       <tr>
         <td class="team">Real Sociedad</td>
-        <td class="omit"><span class="ord">2º</span><div class="cc"><span class="m">⊘</span><span class="tg">@ R.Madrid 26-ago (líder)</span></div></td>
+        <td class="omit"><span class="ord">2º</span><div class="cc"><span class="m">⊘</span><span class="tg">@ R.Madrid (líder)</span></div></td>
         <td class="loss"><span class="ord">1º</span><div class="cc"><span class="m">$100</span><span class="tg">❌ @ Betis −$100</span></div></td>
-        <td class="bet"><span class="ord">3º</span><div class="cc"><span class="m">$200</span><span class="tg">🎫 vs Espanyol 29-ago</span></div></td>
-        <td class="none"><div class="cc"><span class="m">·</span></div></td>
+        <td class="loss"><span class="ord">3º</span><div class="cc"><span class="m">$200</span><span class="tg">❌ vs Espanyol (2-1) −$200</span></div></td>
+        <td class="bet"><span class="ord">4º</span><div class="cc"><span class="m">$400</span><span class="tg">🎫 @ Elche 7-sep</span></div></td>
       </tr>
     </tbody>
   </table>
@@ -106,29 +107,39 @@
     <span><b style="color:var(--pos)">✅</b> empató (ganó)</span>
     <span><b style="color:var(--neg)">❌</b> no empató</span>
     <span><b style="color:var(--warn)">🎫 $</b> apostada (abierta)</span>
-    <span><b style="color:var(--accent)">⏳ $</b> próximo monto</span>
     <span><b class="omit">⊘</b> omitir (vs Madrid/Barça)</span>
     <span><b style="color:var(--warn)">1º/2º</b> orden real</span>
   </div>
 
-  <h2>🎫 Apuestas abiertas — jornada del 28-29 ago</h2>
+  <h2>❌ Resultado J3 — 0 de 4 (ningún empate)</h2>
   <ul class="nextlist">
-    <li><span><b>Alavés</b> — vs Villarreal · 28-ago 13:30 · momio 3.45</span><span><span class="amt" style="color:var(--warn)">$100</span> <span class="tg" style="color:var(--mut)">→ $345</span></span></li>
-    <li><span><b>Betis</b> — @ Levante · 29-ago 09:00 · momio 3.45</span><span><span class="amt" style="color:var(--warn)">$400</span> <span class="tg" style="color:var(--mut)">→ $1,380</span></span></li>
-    <li><span><b>R. Sociedad</b> — vs Espanyol · 29-ago 11:00 · momio 3.55</span><span><span class="amt" style="color:var(--warn)">$200</span> <span class="tg" style="color:var(--mut)">→ $710</span></span></li>
-    <li><span><b>Sevilla</b> — vs Atlético · 29-ago 13:30 · momio 3.45</span><span><span class="amt" style="color:var(--warn)">$400</span> <span class="tg" style="color:var(--mut)">→ $1,380</span></span></li>
+    <li><span><b>Alavés</b> — vs Villarreal <b style="color:var(--neg)">1-0</b></span><span><span class="amt" style="color:var(--neg)">−$100</span></span></li>
+    <li><span><b>Betis</b> — @ Levante <b style="color:var(--neg)">5-2</b></span><span><span class="amt" style="color:var(--neg)">−$400</span></span></li>
+    <li><span><b>R. Sociedad</b> — vs Espanyol <b style="color:var(--neg)">2-1</b></span><span><span class="amt" style="color:var(--neg)">−$200</span></span></li>
+    <li><span><b>Sevilla</b> — vs Atlético <b style="color:var(--neg)">1-3</b></span><span><span class="amt" style="color:var(--neg)">−$400</span></span></li>
   </ul>
-  <div class="box" style="margin-top:8px">En juego <b style="color:var(--warn)">$1,100</b>. Si empatan las 4 → cobras <b style="color:var(--pos)">$3,815</b> (ganancia neta +$2,715). Cada equipo que empate reinicia a $100; el que no, dobla.</div>
+  <div class="box" style="margin-top:8px">Las 4 apuestas perdieron (ninguno empató) → <b style="color:var(--neg)">−$1,100</b> en la J3. Balance por equipo acumulado: <b style="color:var(--neg)">−$1,290</b>. Sevilla y Betis, con dos derrotas seguidas, ya suben a <b>$800</b> su próxima.</div>
 
-  <h2>⏳ Después (aún no apostadas)</h2>
+  <div class="box alert">
+    <b>⚠️ Estado del bank.</b> Sumando la estrategia de <b>empate por jornada</b> de la J3 (ver pestaña "🎯 Por jornada"), que perdió <b>−$12,700</b> en una jornada sin ningún empate, tu bank de $10,000 quedó <b>agotado</b> y el acumulado va en <b>−$3,030</b>. La martingala acaba de mostrar su peor escenario: una jornada entera sin empates lleva la apuesta a miles y se come el bank. Antes de seguir doblando conviene decidir el bank real y el tope máximo de apuesta.
+  </div>
+
+  <h2>🎫 Apuestas abiertas (5 · en orden de fecha)</h2>
   <ul class="nextlist">
-    <li><span><b>R. Sociedad</b> — @ Real Madrid · 26-ago</span><span class="amt o">⊘ omitir (líder)</span></li>
-    <li><span><b>Rayo</b> — @ Barcelona · 31-ago</span><span class="amt o">⊘ omitir (líder)</span></li>
-    <li><span><b>Rayo</b> — vs Racing · 5-sep</span><span class="amt b">$100</span></li>
+    <li><span><b>R. Sociedad</b> — vs Celta · 3-sep · momio 3.55 <span class="tg" style="color:var(--accent)">◄ adelantado (J6)</span></span><span><span class="amt" style="color:var(--warn)">$400</span> <span class="tg" style="color:var(--mut)">→ $1,420</span></span></li>
+    <li><span><b>Rayo</b> — vs Racing · 5-sep · momio 3.40</span><span><span class="amt" style="color:var(--warn)">$100</span> <span class="tg" style="color:var(--mut)">→ $340</span></span></li>
+    <li><span><b>Alavés</b> — vs Osasuna · 6-sep · momio 3.10</span><span><span class="amt" style="color:var(--warn)">$200</span> <span class="tg" style="color:var(--mut)">→ $620</span></span></li>
+    <li><span><b>Sevilla</b> — @ Espanyol · 6-sep · momio 3.15</span><span><span class="amt" style="color:var(--warn)">$800</span> <span class="tg" style="color:var(--mut)">→ $2,520</span></span></li>
+    <li><span><b>R. Sociedad</b> — @ Elche · 7-sep · momio 3.40 <span class="tg" style="color:#6b7686">(2ª de R.Soc, fuera de turno)</span></span><span><span class="amt" style="color:var(--warn)">$400</span> <span class="tg" style="color:var(--mut)">→ $1,360</span></span></li>
+    <li><span><b>Betis</b> — vs Real Madrid</span><span class="amt o">⊘ omitido (líder) · $800 a J5</span></li>
   </ul>
+  <div class="box" style="margin-top:8px">En juego <b style="color:var(--warn)">$1,900</b> (5 apuestas). Si empatan todas → cobras <b style="color:var(--pos)">$6,260</b> (neto +$4,360). <b>Sevilla es la de más presión</b> ($800; si no empata sube a $1,600). Real Sociedad va con <b>dos</b> abiertas (Celta y Elche); con que empate cualquiera ya reinicia.</div>
+
+  <div class="box alert">
+    <b>✓ Real Sociedad — corregido.</b> Apostaste <b>vs Celta $400</b> (mañana 3-sep, adelantado de la J6) — ese es su paso correcto en orden de fechas. Ahora tienes también el <b>@ Elche $400</b> (7-sep) fuera de turno. Según salga Celta: <b>si empata</b> → cobras y reinicias, el de Elche sobra (bájalo con "recuperar apuesta" o déjalo de tiro extra); <b>si no empata</b> → el paso siguiente sería $800 @ Elche (súbele $400 o déjalo en $400 con menos riesgo).
+  </div>
 
   <div class="box">
-    <b>Nota de orden (Betis y R. Sociedad):</b> su J2 (21-ago) se jugó ANTES que su J1 (25 y 26 ago). <b>Betis</b> perdió las dos ($100 en J2 y $200 en J1 vs Valencia) → su siguiente sube a $400 (J3 vs Levante, 29-ago). La J1 de <b>R. Sociedad</b> es @ Real Madrid → se omite (líder), así que su $200 se traslada a la J3 vs Espanyol.<br><br>
     <b>Cómo avanza el monto:</b> empató → cobras y reinicia a $100; no empató → dobla (×2). Los ⊘ (vs Real Madrid o Barcelona) se saltan y el monto de ese equipo se congela hasta su próximo partido apostable.
   </div>
 </div>
