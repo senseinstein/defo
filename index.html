@@ -44,7 +44,7 @@
   .acct .t{color:var(--mut);font-size:11px;text-transform:uppercase;letter-spacing:.04em}
   .acct .v{font-size:22px;font-weight:800;margin-top:2px}
   tfoot td{font-weight:800;background:#0f1620;border-top:2px solid var(--line)}
-  table.matrix{min-width:520px}
+  table.matrix{min-width:820px}
   table.matrix th,table.matrix td{text-align:center;border:1px solid #1c232e}
   table.matrix td.team{text-align:left}
   .c{font-weight:800;font-size:13px;line-height:1.15;padding:8px 6px}
@@ -101,21 +101,25 @@
       <tr><td class="team">Real Betis</td><td class="n">1</td><td class="n pos">0</td><td class="n">5</td><td class="n warn">$3,200</td><td class="n pos">+$5,220</td><td><span class="chip c-next">$100</span> vs Osasuna</td><td class="pos">✅ @ Depor (1-1)</td></tr>
       <tr><td class="team">Alavés</td><td class="n">2</td><td class="n pos">0</td><td class="n">4</td><td class="n">$1,600</td><td class="n pos">+$3,190</td><td><span class="chip c-next">$100</span> vs Atlético</td><td class="pos">✅ @ Athletic (0-0)</td></tr>
       <tr><td class="team">Rayo</td><td class="n">2</td><td class="n pos">0</td><td class="n">2</td><td class="n">$400</td><td class="n pos">+$840</td><td><span class="chip c-next">$100</span> vs Athletic</td><td class="pos">✅ @ Osasuna (1-1)</td></tr>
-      <tr><td class="team">Sevilla</td><td class="n">1</td><td class="n warn">2</td><td class="n">2</td><td class="n">$200</td><td class="n pos">+$780</td><td><span class="chip c-next">$400</span> @ Levante</td><td>❌ J7 omitido (Barça)</td></tr>
-      <tr><td class="team">R. Sociedad</td><td class="n">1</td><td class="n neg">3</td><td class="n">3</td><td class="n">$400</td><td class="n pos">+$20</td><td><span class="chip c-next">$800</span> vs Depor</td><td>❌ @ Valencia (2-3)</td></tr>
+      <tr><td class="team">Sevilla</td><td class="n">1</td><td class="n warn">2</td><td class="n">3</td><td class="n">$800</td><td class="n pos">+$780</td><td><span class="chip c-next">$400</span> @ Levante</td><td>❌ J7 omitido (Barça)</td></tr>
+      <tr><td class="team">R. Sociedad</td><td class="n">1</td><td class="n neg">3</td><td class="n">3</td><td class="n">$800</td><td class="n pos">+$20</td><td><span class="chip c-next">$800</span> vs Depor</td><td>❌ @ Valencia (2-3)</td></tr>
     </tbody>
     <tfoot><tr><td>Total</td><td class="n">7</td><td class="n"></td><td class="n"></td><td class="n"></td><td class="n pos">+$10,050</td><td>$1,500</td><td></td></tr></tfoot>
   </table>
   </div>
 
-  <h2>📉 Progresión de montos por jornada</h2>
-  <div class="lead">Cada celda: el monto apostado y el resultado. <span style="color:#7fe0a0">Verde</span> = empató (cobra y reinicia a $100). <span style="color:#ff9a94">Rojo</span> = no empató (dobla). <span style="color:#6b7686">Gris</span> = omitido (vs Madrid/Barça). <span style="color:#7fb8ff">Azul</span> = próxima.</div>
+  <h2>📉 Progresión de montos por jornada (desde la J1)</h2>
+  <div class="lead">Cada celda: el monto apostado y el resultado. <span style="color:#7fe0a0">Verde</span> = empató (cobra y reinicia a $100). <span style="color:#ff9a94">Rojo</span> = no empató (dobla). <span style="color:#6b7686">Gris</span> = omitido (vs Madrid/Barça). <span style="color:#7fb8ff">Azul</span> = próxima. Desliza → para ver todas las jornadas.</div>
   <div class="scroll">
   <table class="matrix">
-    <thead><tr><th>Equipo</th><th>J5</th><th>J6</th><th>J7</th><th>J8 (próx)</th></tr></thead>
+    <thead><tr><th>Equipo</th><th>J1</th><th>J2</th><th>J3</th><th>J4</th><th>J5</th><th>J6</th><th>J7</th><th>J8 próx</th></tr></thead>
     <tbody>
       <tr>
         <td class="team">Real Betis</td>
+        <td class="c loss">$100<small>❌</small></td>
+        <td class="c loss">$200<small>❌</small></td>
+        <td class="c loss">$400<small>❌</small></td>
+        <td class="c skip">—<small>⊘</small></td>
         <td class="c loss">$800<small>❌</small></td>
         <td class="c loss">$1,600<small>❌</small></td>
         <td class="c win">$3,200<small>✅</small></td>
@@ -123,6 +127,10 @@
       </tr>
       <tr>
         <td class="team">Alavés</td>
+        <td class="c loss">$100<small>❌</small></td>
+        <td class="c win">$200<small>✅</small></td>
+        <td class="c loss">$100<small>❌</small></td>
+        <td class="c loss">$200<small>❌</small></td>
         <td class="c loss">$400<small>❌</small></td>
         <td class="c loss">$800<small>❌</small></td>
         <td class="c win">$1,600<small>✅</small></td>
@@ -130,6 +138,10 @@
       </tr>
       <tr>
         <td class="team">Rayo</td>
+        <td class="c loss">$100<small>❌</small></td>
+        <td class="c loss">$200<small>❌</small></td>
+        <td class="c win">$400<small>✅</small></td>
+        <td class="c loss">$100<small>❌</small></td>
         <td class="c skip">—<small>⊘</small></td>
         <td class="c loss">$200<small>❌</small></td>
         <td class="c win">$400<small>✅</small></td>
@@ -139,13 +151,21 @@
         <td class="team">Sevilla</td>
         <td class="c loss">$100<small>❌</small></td>
         <td class="c loss">$200<small>❌</small></td>
+        <td class="c loss">$400<small>❌</small></td>
+        <td class="c win">$800<small>✅</small></td>
+        <td class="c loss">$100<small>❌</small></td>
+        <td class="c loss">$200<small>❌</small></td>
         <td class="c skip">—<small>⊘</small></td>
         <td class="c next">$400<small>·</small></td>
       </tr>
       <tr>
         <td class="team">R. Sociedad</td>
+        <td class="c loss">$100<small>❌</small></td>
         <td class="c loss">$200<small>❌</small></td>
-        <td class="c win">$100<small>✅*</small></td>
+        <td class="c loss">$400<small>❌</small></td>
+        <td class="c loss">$100<small>❌</small></td>
+        <td class="c loss">$200<small>❌</small></td>
+        <td class="c win">$800<small>✅*</small></td>
         <td class="c loss">$400<small>❌</small></td>
         <td class="c next">$800<small>·</small></td>
       </tr>
@@ -153,8 +173,10 @@
   </table>
   </div>
   <div class="box">
-    Se lee de izquierda a derecha: al perder, el monto se <b>dobla</b> (rojo va subiendo); al empatar, <b>cobra y vuelve a $100</b> (verde reinicia). Ejemplo Betis: $800 → $1,600 → <b>$3,200 empató</b> → reinicia $100.<br>
-    <span style="color:var(--mut)">* R. Sociedad jugó su empate (vs Celta) <b>adelantado</b>, así que su progresión no sigue el orden normal de jornadas; el resultado (próxima $800, paso 4) sí es correcto. Las jornadas J1-J4 no se muestran aquí — si me pasas esas boletas completo la cuadrícula desde el inicio.</span>
+    Se lee de izquierda a derecha: al perder, el monto se <b>dobla</b> (rojo va subiendo); al empatar, <b>cobra y vuelve a $100</b> (verde reinicia). Ejemplo Betis: $100→$200→$400→(omitido)→$800→$1,600→<b>$3,200 empató</b>→reinicia $100.
+  </div>
+  <div class="box alert">
+    <b>⚠️ Confianza de los datos.</b> <b>Betis y Sevilla</b> están reconstruidos y <b>cuadran exacto</b> con su balance (+$5,220 y +$780). <b>Alavés, Rayo y R. Sociedad</b> en J1-J4 son mi mejor reconstrucción según el estado final (empates, monto máx y paso actual coinciden), pero el momento exacto de cada empate temprano puede variar. <b>R. Sociedad (*)</b> jugó su empate vs Celta <b>adelantado</b> (antes de la J4), por eso el $800 verde aparece en J6 aunque cronológicamente cayó antes. Si me pasas las boletas de <b>J1-J4</b>, lo dejo 100% confirmado.
   </div>
 
   <h2>🥅 Empates por temporada — histórico vs este torneo</h2>
