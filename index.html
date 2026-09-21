@@ -3,110 +3,186 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Backtest Empates 2025-26 · Rendimiento</title>
+<title>Empate por Equipo · Mis 5 Equipos España</title>
 <style>
   :root{--bg:#0d1117;--panel:#161b22;--line:#2a3140;--txt:#e6edf3;--mut:#9aa7b8;
-    --pos:#3fb950;--neg:#f85149;--accent:#58a6ff;--warn:#e3b341;--it:#0f74b8;--nl:#e77f00;--es:#c8102e;}
+    --pos:#3fb950;--neg:#f85149;--accent:#58a6ff;--warn:#e3b341;--es:#c8102e;}
   *{box-sizing:border-box}
   body{margin:0;background:var(--bg);color:var(--txt);
-    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;line-height:1.5}
-  .wrap{max-width:880px;margin:0 auto;padding:34px 15px 70px}
-  h1{font-size:24px;margin:0 0 4px}
-  .sub{color:var(--mut);font-size:13.5px;margin-bottom:22px}
-  h2{font-size:16px;margin:30px 0 10px;display:flex;align-items:center;gap:8px}
-  .hero{background:linear-gradient(135deg,#12331d,#161b22);border:1px solid #234a2e;border-radius:16px;
-    padding:20px 22px;margin:8px 0 6px;text-align:center}
-  .hero .big{font-size:clamp(38px,10vw,58px);font-weight:800;color:var(--pos);line-height:1;letter-spacing:-1px}
-  .hero .cap{color:var(--mut);font-size:13px;margin-top:6px}
-  .kpis{display:flex;flex-wrap:wrap;gap:10px;margin:16px 0 4px}
-  .kpi{flex:1;min-width:150px;background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:13px 15px}
-  .kpi .l{color:var(--mut);font-size:11px;text-transform:uppercase;letter-spacing:.05em}
-  .kpi .v{font-size:22px;font-weight:800;margin-top:3px}
-  .kpi .v.pos{color:var(--pos)}
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;line-height:1.45}
+  .wrap{max-width:900px;margin:0 auto;padding:24px 14px 70px}
+  h1{font-size:22px;margin:8px 0 4px}
+  .sub{color:var(--mut);font-size:13px;margin-bottom:14px}
+  .hero{background:linear-gradient(135deg,#12331d,#161b22);border:1px solid #234a2e;border-radius:16px;padding:18px 20px;text-align:center;margin-bottom:10px}
+  .hero .big{font-size:clamp(30px,8vw,46px);font-weight:800;line-height:1;letter-spacing:-1px;color:#7fe0a0}
+  .hero .cap{color:var(--mut);font-size:12.5px;margin-top:6px}
+  .kpis{display:flex;flex-wrap:wrap;gap:9px;margin:0 0 8px}
+  .kpi{background:var(--panel);border:1px solid var(--line);border-radius:11px;padding:9px 13px;font-size:12.5px}
+  .kpi b{font-size:17px;display:block;margin-top:2px}
   .scroll{overflow-x:auto;border:1px solid var(--line);border-radius:12px;margin-top:6px}
-  table{width:100%;border-collapse:collapse;font-size:13px;min-width:460px}
-  th,td{padding:10px 12px;border-bottom:1px solid #1c232e;text-align:right}
-  th:first-child,td:first-child{text-align:left}
-  th{color:var(--mut);font-size:11px;text-transform:uppercase;letter-spacing:.04em;background:#121824}
-  tr:last-child td{border-bottom:none}
-  td.team{font-weight:700;white-space:nowrap;background:#11161d}
-  .pos{color:var(--pos)}.neg{color:var(--neg)}
-  tfoot td{font-weight:800;background:#0f1620;border-top:2px solid var(--line)}
-  .fl{display:inline-block;color:#fff;font-size:10px;font-weight:800;border-radius:5px;padding:2px 7px}
-  .flit{background:var(--it)}.flnl{background:var(--nl)}.fles{background:var(--es)}
-  .box{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:14px 16px;font-size:13px;color:#d7e0ea;margin-top:14px}
+  table{width:100%;border-collapse:collapse;font-size:12.5px;min-width:600px}
+  th,td{padding:9px 10px;border-bottom:1px solid #1c232e;text-align:left}
+  th{color:var(--mut);font-size:10.5px;text-transform:uppercase;letter-spacing:.03em;background:#121824}
+  td.team{font-weight:700;white-space:nowrap}
+  td.n,th.n{text-align:right;font-variant-numeric:tabular-nums}
+  .pos{color:var(--pos)}.neg{color:var(--neg)}.warn{color:var(--warn)}
+  .chip{display:inline-block;font-size:10px;font-weight:700;padding:1px 7px;border-radius:5px}
+  .c-next{background:#0d2438;color:#7fb8ff}
+  .bar{display:inline-block;height:8px;border-radius:4px;background:var(--accent);vertical-align:middle}
+  h2{font-size:15px;margin:24px 0 8px}
+  .nextlist{list-style:none;padding:0;margin:0}
+  .nextlist li{display:flex;justify-content:space-between;gap:10px;padding:9px 12px;border:1px solid var(--line);border-radius:10px;margin-bottom:7px;background:var(--panel);font-size:13px}
+  .nextlist .amt{font-weight:800}.amt.b{color:var(--accent)}
+  .box{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:13px 15px;font-size:12.5px;margin-top:12px}
   .box b{color:#fff}
-  .note{color:var(--mut);font-size:12px;margin-top:8px;padding:0 2px}
-  .avoid{color:var(--neg);font-weight:700}
-  footer{color:#6b7686;font-size:12px;margin-top:40px;border-top:1px solid var(--line);padding-top:14px}
-  .tag{display:inline-block;font-size:10px;font-weight:700;padding:2px 7px;border-radius:6px;background:#1a2430;color:var(--mut);margin-left:6px}
+  .good{background:#0d2a18;border:1px solid #1e6b3e;color:#a6e9c1}.good b{color:#fff}
+  .alert{background:#241c10;border:1px solid #4a3a13;color:#e3c98e}.alert b{color:#fff}
+  .split{display:flex;flex-wrap:wrap;gap:9px;margin:6px 0 4px}
+  .acct{flex:1;min-width:200px;border-radius:12px;padding:12px 14px;font-size:12.5px}
+  .acct.a{background:#0d2a18;border:1px solid #1e6b3e}
+  .acct.b{background:#161b22;border:1px solid var(--line)}
+  .acct .t{color:var(--mut);font-size:11px;text-transform:uppercase;letter-spacing:.04em}
+  .acct .v{font-size:22px;font-weight:800;margin-top:2px}
+  tfoot td{font-weight:800;background:#0f1620;border-top:2px solid var(--line)}
+  footer{color:#6b7686;font-size:11.5px;margin-top:34px;border-top:1px solid var(--line);padding-top:12px}
+  .lead{color:var(--mut);font-size:12.5px;margin:2px 2px 0}
 </style>
 </head>
 <body>
 <div class="wrap">
-  <h1>📊 Backtest Empates — Temporada 2025-26</h1>
-  <div class="sub">Estrategia martingala sobre empates · base $100 · ×1.5 · meta 5 empates · momio ≥ 3.00 · resultados reales de temporada completa</div>
+  <nav style="display:flex;flex-wrap:wrap;gap:6px;margin-bottom:14px;font-size:12.5px">
+    <a href="index.html" style="padding:6px 11px;border:1px solid #3fb950;border-radius:8px;text-decoration:none;color:#fff;background:#12331d;font-weight:700">🇪🇸 Mis 5 equipos</a>
+    <a href="proxima-jornada.html" style="padding:6px 11px;border:1px solid #2a3140;border-radius:8px;text-decoration:none;color:#9aa7b8;background:#161b22">📅 Próxima jornada</a>
+    <a href="empate-jornada-esp.html" style="padding:6px 11px;border:1px solid #2a3140;border-radius:8px;text-decoration:none;color:#9aa7b8;background:#161b22">🎯 Por jornada (opcional)</a>
+  </nav>
 
-  <div style="display:flex;flex-wrap:wrap;gap:8px;margin:2px 0 4px">
-    <a href="proximas.html" style="display:inline-block;background:#0d2438;border:1px solid #1e4a6b;color:var(--accent);text-decoration:none;font-size:13.5px;font-weight:600;border-radius:10px;padding:10px 16px">🔵 Próximas apuestas (2026-27) →</a>
-    <a href="seguimiento-esp.html" style="display:inline-block;background:#2a0d14;border:1px solid #6b1e2a;color:#ff8a94;text-decoration:none;font-size:13.5px;font-weight:600;border-radius:10px;padding:10px 16px">🇪🇸 Mis 5 equipos España →</a>
-    <a href="empate-jornada-j3.html" style="display:inline-block;background:#2a230d;border:1px solid #6b591e;color:#e3b341;text-decoration:none;font-size:13.5px;font-weight:600;border-radius:10px;padding:10px 16px">🎯 Empate por jornada (J3) →</a>
-    <a href="seguimiento-3ligas.html" style="display:inline-block;background:#0d2a18;border:1px solid #1e6b3e;color:#5ddc86;text-decoration:none;font-size:13.5px;font-weight:600;border-radius:10px;padding:10px 16px">🟩 Seguimiento 3 ligas (49 equipos) →</a>
-    <a href="balance-general.html" style="display:inline-block;background:#12233a;border:1px solid #24405f;color:#7fb8ff;text-decoration:none;font-size:13.5px;font-weight:700;border-radius:10px;padding:10px 16px">💰 Balance general →</a>
-    <a href="resto-apuestas.html" style="display:inline-block;background:#161b22;border:1px solid #2a3140;color:#9aa7b8;text-decoration:none;font-size:13.5px;font-weight:600;border-radius:10px;padding:10px 16px">🎾 El resto (tenis + otras) →</a>
-  </div>
+  <h1><span style="color:var(--es)">🇪🇸</span> Empate por Equipo — Mis 5 Equipos</h1>
+  <div class="sub">LaLiga 2026-27 · base $100 · ×2 al perder · reinicia al empatar · tope en el paso 6 · actualizado tras J7</div>
 
   <div class="hero">
-    <div class="big">+$76,980</div>
-    <div class="cap">Empate por equipo · 3 ligas a roster completo (todos los medios, sin los grandes) · base $100</div>
+    <div class="big">$20,050</div>
+    <div class="cap">Cuenta dedicada a esta estrategia · banca $10,000 + utilidad acumulada $10,050</div>
+  </div>
+
+  <div class="split">
+    <div class="acct a">
+      <div class="t">Cuenta empate por equipo</div>
+      <div class="v pos">$20,050</div>
+      <div style="color:var(--mut);margin-top:3px">$10,000 banca + $10,050 utilidad · solo esta estrategia</div>
+    </div>
+    <div class="acct b">
+      <div class="t">Cuenta principal (resto)</div>
+      <div class="v">$9,720</div>
+      <div style="color:var(--mut);margin-top:3px">Tenis y otros movimientos · fuera de este seguimiento</div>
+    </div>
   </div>
 
   <div class="kpis">
-    <div class="kpi"><div class="l">Ligas</div><div class="v">3</div></div>
-    <div class="kpi"><div class="l">Equipos seguidos</div><div class="v">49</div></div>
-    <div class="kpi"><div class="l">Apuesta máxima</div><div class="v">$3,848</div></div>
+    <span class="kpi">Utilidad acumulada<b class="pos">+$10,050</b></span>
+    <span class="kpi">Empates (este torneo)<b>7</b></span>
+    <span class="kpi">En juego J8<b>$1,500</b></span>
+    <span class="kpi">Tope por equipo<b>$3,200</b></span>
   </div>
 
-  <h2>1 · Empate por equipo — combinado 3 ligas</h2>
-  <div class="note">Cada liga con todos sus equipos medios; se excluyen solo los 3 grandes de cada una (los que casi nunca empatan).</div>
+  <h2>📊 Estado por equipo</h2>
+  <div class="lead">Racha = partidos apostables sin empatar desde su último empate. Monto máx = la apuesta más alta a la que ha llegado esta temporada.</div>
   <div class="scroll">
   <table>
-    <thead><tr><th>Liga</th><th>Equipos</th><th>Balance</th></tr></thead>
+    <thead><tr><th>Equipo</th><th class="n">Empates torneo</th><th class="n">Racha actual</th><th class="n">Racha máx</th><th class="n">Monto máx</th><th class="n">Utilidad</th><th>Próx. J8</th><th>Último</th></tr></thead>
     <tbody>
-      <tr><td class="team"><span class="fl flnl">NED</span> Eredivisie</td><td>15</td><td class="pos">+$25,255</td></tr>
-      <tr><td class="team"><span class="fl flit">ITA</span> Serie A</td><td>17</td><td class="pos">+$21,641</td></tr>
-      <tr><td class="team"><span class="fl fles">ESP</span> LaLiga</td><td>17</td><td class="pos">+$30,084</td></tr>
+      <tr><td class="team">Real Betis</td><td class="n">1</td><td class="n pos">0</td><td class="n">5</td><td class="n warn">$3,200</td><td class="n pos">+$5,220</td><td><span class="chip c-next">$100</span> vs Osasuna</td><td class="pos">✅ @ Depor (1-1)</td></tr>
+      <tr><td class="team">Alavés</td><td class="n">2</td><td class="n pos">0</td><td class="n">4</td><td class="n">$1,600</td><td class="n pos">+$3,190</td><td><span class="chip c-next">$100</span> vs Atlético</td><td class="pos">✅ @ Athletic (0-0)</td></tr>
+      <tr><td class="team">Rayo</td><td class="n">2</td><td class="n pos">0</td><td class="n">2</td><td class="n">$400</td><td class="n pos">+$840</td><td><span class="chip c-next">$100</span> vs Athletic</td><td class="pos">✅ @ Osasuna (1-1)</td></tr>
+      <tr><td class="team">Sevilla</td><td class="n">1</td><td class="n warn">2</td><td class="n">2</td><td class="n">$200</td><td class="n pos">+$780</td><td><span class="chip c-next">$400</span> @ Levante</td><td>❌ J7 omitido (Barça)</td></tr>
+      <tr><td class="team">R. Sociedad</td><td class="n">1</td><td class="n neg">3</td><td class="n">3</td><td class="n">$400</td><td class="n pos">+$20</td><td><span class="chip c-next">$800</span> vs Depor</td><td>❌ @ Valencia (2-3)</td></tr>
     </tbody>
-    <tfoot><tr><td>Total por equipo</td><td>49</td><td class="pos">+$76,980</td></tr></tfoot>
+    <tfoot><tr><td>Total</td><td class="n">7</td><td class="n"></td><td class="n"></td><td class="n"></td><td class="n pos">+$10,050</td><td>$1,500</td><td></td></tr></tfoot>
   </table>
   </div>
 
-  <h2>2 · Qué equipos entran y cuáles se evitan</h2>
+  <h2>🥅 Empates por temporada — histórico vs este torneo</h2>
+  <div class="lead">Cuántos empates hizo cada equipo en LaLiga en los 2 torneos pasados, su tasa de empate y cómo van este torneo.</div>
   <div class="scroll">
   <table>
-    <thead><tr><th>Liga</th><th>Se sigue</th><th>Se excluye / evita</th></tr></thead>
+    <thead><tr><th>Equipo</th><th class="n">2024-25</th><th class="n">2025-26</th><th class="n">Tasa empate (2 años)</th><th class="n">Este torneo (tras J7)</th></tr></thead>
     <tbody>
-      <tr><td class="team"><span class="fl flnl">NED</span> Eredivisie</td><td style="text-align:left">15 equipos medios</td><td style="text-align:left"><span class="avoid">PSV · Ajax · Feyenoord</span></td></tr>
-      <tr><td class="team"><span class="fl flit">ITA</span> Serie A</td><td style="text-align:left">17 equipos medios</td><td style="text-align:left"><span class="avoid">Inter · Napoli · Juventus</span></td></tr>
-      <tr><td class="team"><span class="fl fles">ESP</span> LaLiga</td><td style="text-align:left">17 equipos medios</td><td style="text-align:left"><span class="avoid">Real Madrid · Barcelona · Atlético</span></td></tr>
+      <tr><td class="team">Real Betis</td><td class="n">12</td><td class="n">15</td><td class="n pos">35.5%</td><td class="n">1</td></tr>
+      <tr><td class="team">Rayo</td><td class="n">13</td><td class="n">14</td><td class="n pos">35.5%</td><td class="n">2</td></tr>
+      <tr><td class="team">Alavés</td><td class="n">12</td><td class="n">10</td><td class="n">28.9%</td><td class="n">2</td></tr>
+      <tr><td class="team">R. Sociedad</td><td class="n">7</td><td class="n">13</td><td class="n">26.3%</td><td class="n">1</td></tr>
+      <tr><td class="team">Sevilla</td><td class="n">11</td><td class="n">7</td><td class="n neg">23.7%</td><td class="n">1</td></tr>
+    </tbody>
+    <tfoot><tr><td>Total 5 equipos</td><td class="n">55</td><td class="n">59</td><td class="n">≈ 30%</td><td class="n">7</td></tr></tfoot>
+  </table>
+  </div>
+
+  <h2>📈 Ritmo de empates — ¿vamos adelantados o atrasados?</h2>
+  <div class="scroll">
+  <table>
+    <thead><tr><th>Punto del torneo</th><th class="n">Empates acumulados (5 equipos)</th></tr></thead>
+    <tbody>
+      <tr><td class="team">Este torneo — tras J7</td><td class="n neg">7</td></tr>
+      <tr><td class="team">Ritmo 2024-25 a estas alturas (estimado)</td><td class="n">≈ 10</td></tr>
+      <tr><td class="team">Ritmo 2025-26 a estas alturas (estimado)</td><td class="n">≈ 11</td></tr>
     </tbody>
   </table>
   </div>
-  <div class="note">A los grandes no se les sigue (casi no empatan) y además <b>no se apuesta</b> cuando un equipo medio los enfrenta como líder — se salta ese partido y la progresión de ese equipo se congela hasta su próximo partido apostable.</div>
-
-  <h2>3 · Estrategia extra — empate por jornada (España) <span class="tag">opcional, aparte</span></h2>
-  <div class="box">
-    Es una estrategia <b>distinta</b> a la de por equipo: apuestas al empate de la jornada (2 empates por jornada, 1 a la vez, filtro anti-grandes). En el backtest 2025-26 sumó <b class="pos">+$20,597</b> por su cuenta. Si la corres <b>además</b> del por-equipo, el combinado sube a ≈ <b class="pos">+$97,577</b>.
+  <div class="box alert">
+    <b>⚠️ Vamos ~3-4 empates por debajo del promedio histórico.</b> A estas alturas de las dos temporadas pasadas, tus 5 equipos ya llevarían ~10-11 empates; este torneo van <b>7</b>. Menos empates = <b>rachas más largas</b> y más presión sobre la martingala (por eso Betis llegó a $3,200). Si el ritmo se normaliza, deberían venir más empates en las próximas jornadas.
+    <br><span style="color:var(--mut)">El ritmo histórico es un <b>prorrateo</b> del total de la temporada (los empates no se reparten parejo, así que es una referencia, no un dato exacto por jornada).</span>
   </div>
 
-  <h2>4 · Lecturas importantes</h2>
-  <div class="box">
-    Todo es <b>backtest de la temporada 2025-26 completa</b> con base $100. Escala lineal: base $200 duplica todo (balance y apuesta máxima), base $300 lo triplica, etc. El pico de exposición del bank es la <b>apuesta máxima ($3,848)</b>, que corresponde a la racha larga de un solo equipo antes de empatar — es lo que tu bank tiene que poder cubrir. Los picos de cada liga no coinciden en el tiempo, así que el bank real necesario es menor que la suma de picos. Esto <b>no es una promesa</b> de resultado futuro: es lo que habría rendido la estrategia aplicada a esa temporada.
+  <h2>🧨 Riesgo de rachas — ¿qué tan larga puede ser una mala racha?</h2>
+  <div class="lead">Con la tasa de empate de cada equipo, esto es la racha seca (sin empatar) más larga que es razonable esperar en una temporada y la apuesta a la que te llevaría sin tope.</div>
+  <div class="scroll">
+  <table>
+    <thead><tr><th>Equipo</th><th class="n">Tasa empate</th><th class="n">Racha seca esperable</th><th class="n">Apuesta pico (sin tope)</th><th class="n">Con tope paso 6</th></tr></thead>
+    <tbody>
+      <tr><td class="team">Betis / Rayo</td><td class="n pos">35.5%</td><td class="n">~5-6 juegos</td><td class="n warn">$3,200 – $6,400</td><td class="n pos">pierde ≤ $6,300</td></tr>
+      <tr><td class="team">Alavés</td><td class="n">28.9%</td><td class="n">~7 juegos</td><td class="n neg">$6,400 – $12,800</td><td class="n pos">pierde ≤ $6,300</td></tr>
+      <tr><td class="team">R. Sociedad</td><td class="n">26.3%</td><td class="n">~7 juegos</td><td class="n neg">$6,400 – $12,800</td><td class="n pos">pierde ≤ $6,300</td></tr>
+      <tr><td class="team">Sevilla</td><td class="n neg">23.7%</td><td class="n">~8 juegos</td><td class="n neg">$12,800 – $25,600</td><td class="n pos">pierde ≤ $6,300</td></tr>
+    </tbody>
+  </table>
   </div>
+  <div class="box alert">
+    <b>La lección más importante.</b> Sevilla es el más peligroso: con solo ~24% de empate, una racha de 8 juegos sin empatar es <b>esperable al menos una vez por temporada</b>, y eso sin tope te lleva a apostar <b>$12,800–$25,600</b> en una sola boleta. Por eso el <b>tope en el paso 6 ($3,200)</b> no es opcional: convierte un desastre potencial en una pérdida acotada de máximo $6,300 por equipo. Los que más "aguantan" la martingala son Betis y Rayo (empatan seguido); los que más riesgo cargan son Sevilla y R. Sociedad.
+  </div>
+
+  <h2>🎯 Dónde tienes más ventaja de empate</h2>
+  <div class="lead">El empate es más probable en partidos parejos entre equipos de media/baja tabla y poco goleadores; menos probable cuando tu equipo es claro favorito o claro no-favorito.</div>
+  <div class="box">
+    <b>Perfil por equipo (según sus 2 últimas temporadas):</b><br>
+    • <b>Betis y Rayo</b> (35% empate) — son "empatadores": buen valor casi siempre, sobre todo de visita ante rivales de media tabla.<br>
+    • <b>Alavés</b> (29%) — mejor valor de local y ante rivales directos de la parte baja.<br>
+    • <b>R. Sociedad</b> (26%) — más empates de visita ante equipos parejos; evita cuando es favorito claro en casa.<br>
+    • <b>Sevilla</b> (24%) — el más flojo en empates; su mejor ventaja es en duelos entre equipos en crisis (bajo gol de ambos lados).<br>
+    <span style="color:var(--mut)">De la J8, los partidos con más pinta de empate son <b>R. Sociedad vs Deportivo</b> y <b>Sevilla @ Levante</b> (parejos, bajo gol) y <b>Betis vs Osasuna</b> (Osasuna muy empatador). El de menos ventaja es <b>Alavés vs Atlético</b>.</span>
+  </div>
+
+  <div class="box good">
+    <b>🎉 La J7 le dio la vuelta a todo.</b> Betis empató @ Deportivo (1-1, momio 3.60): su $3,200 pagó <b>$11,520</b> → +$8,320, pasó de −$3,100 a <b>+$5,220</b> y reinicia. Con Alavés ($6,080 → +$4,480) y Rayo (+$940), la utilidad quedó en <b class="pos">+$10,050</b>.
+  </div>
+
+  <h2>📅 Resultados recientes</h2>
+  <ul class="nextlist">
+    <li><span><b>J5</b> Alavés @ Racing (2-1) ❌ · Sevilla vs Valencia (1-0) ❌ · Betis @ Villarreal (1-2) ❌ · R.Soc vs Atlético (0-3) ❌ · Rayo @ Madrid ⊘</span></li>
+    <li><span><b>J6</b> Betis vs Getafe (1-0) ❌ · Sevilla @ Depor (0-1) ❌ · Alavés vs Valencia (0-1) ❌ · Rayo vs Espanyol (2-1) ❌ · R.Soc vs Celta (adelantado) ✅</span></li>
+    <li><span><b>J7</b> <b class="pos">Betis @ Depor (1-1) ✅</b> · <b class="pos">Alavés @ Athletic (0-0) ✅</b> · <b class="pos">Rayo @ Osasuna (1-1) ✅</b> · R.Soc @ Valencia (2-3) ❌ · Sevilla vs Barça ⊘</span></li>
+  </ul>
+
+  <h2>⏳ Próxima jornada (J8 · 9-12 oct, tras parón FIFA)</h2>
+  <ul class="nextlist">
+    <li><span><b>Betis</b> — vs Osasuna (reinició)</span><span class="amt b">$100</span></li>
+    <li><span><b>Alavés</b> — vs Atlético (reinició)</span><span class="amt b">$100</span></li>
+    <li><span><b>Rayo</b> — vs Athletic (reinició)</span><span class="amt b">$100</span></li>
+    <li><span><b>Sevilla</b> — @ Levante (paso 3)</span><span class="amt b">$400</span></li>
+    <li><span><b>R. Sociedad</b> — vs Deportivo (paso 4)</span><span class="amt b">$800</span></li>
+  </ul>
+  <div class="box">Total en juego la J8: <b>$1,500</b>. Detalle y seguimiento limpio en <a href="proxima-jornada.html" style="color:var(--accent)">📅 Próxima jornada</a>. Recuerda: solo se saltan partidos vs <b>Real Madrid y Barcelona</b>; contra Atlético sí se apuesta.</div>
 
   <footer>
-    Backtest sobre resultados reales 2025-26 · empate por equipo (Eredivisie + Serie A + LaLiga, roster completo) + empate por jornada (España, opcional).
-    Las probabilidades y proyecciones son estimaciones; ninguna apuesta es segura. Juega con responsabilidad.
+    Empates por temporada: tablas finales de LaLiga 2024-25 y 2025-26 (Wikipedia). Rachas y ritmo por jornada son estimaciones basadas en la tasa de empate de cada equipo. Las probabilidades no garantizan resultados; ninguna apuesta es segura. Juega con responsabilidad.
   </footer>
 </div>
 </body>

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Empate por Jornada (opcional) · España</title>
+<style>
+  :root{--bg:#0d1117;--panel:#161b22;--line:#2a3140;--txt:#e6edf3;--mut:#9aa7b8;
+    --pos:#3fb950;--neg:#f85149;--accent:#58a6ff;--warn:#e3b341;}
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--txt);
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;line-height:1.45}
+  .wrap{max-width:880px;margin:0 auto;padding:24px 14px 70px}
+  h1{font-size:22px;margin:8px 0 4px}
+  .sub{color:var(--mut);font-size:13px;margin-bottom:14px}
+  .hero{background:linear-gradient(135deg,#33120f,#161b22);border:1px solid #5a241e;border-radius:16px;padding:18px 20px;text-align:center;margin-bottom:10px}
+  .hero .big{font-size:clamp(30px,8vw,46px);font-weight:800;line-height:1;letter-spacing:-1px;color:#ff8a80}
+  .hero .cap{color:var(--mut);font-size:12.5px;margin-top:6px}
+  .kpis{display:flex;flex-wrap:wrap;gap:9px;margin:0 0 8px}
+  .kpi{background:var(--panel);border:1px solid var(--line);border-radius:11px;padding:9px 13px;font-size:12.5px}
+  .kpi b{font-size:17px;display:block;margin-top:2px}
+  .scroll{overflow-x:auto;border:1px solid var(--line);border-radius:12px;margin-top:6px}
+  table{width:100%;border-collapse:collapse;font-size:12.5px;min-width:440px}
+  th,td{padding:9px 10px;border-bottom:1px solid #1c232e;text-align:right}
+  th:first-child,td:first-child{text-align:left}
+  th{color:var(--mut);font-size:10.5px;text-transform:uppercase;letter-spacing:.03em;background:#121824}
+  td.j{font-weight:700;white-space:nowrap;text-align:left}
+  .pos{color:var(--pos)}.neg{color:var(--neg)}.zero{color:var(--mut)}
+  tfoot td{font-weight:800;background:#0f1620;border-top:2px solid var(--line)}
+  h2{font-size:15px;margin:22px 0 8px}
+  .box{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:13px 15px;font-size:12.5px;margin-top:12px}
+  .box b{color:#fff}
+  .alert{background:#2a0d0d;border:1px solid #6b1e1e;color:#ffb3ad}.alert b{color:#fff}
+  .opt{background:#241c10;border:1px solid #4a3a13;color:#e3c98e}.opt b{color:#fff}
+  footer{color:#6b7686;font-size:11.5px;margin-top:34px;border-top:1px solid var(--line);padding-top:12px}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <nav style="display:flex;flex-wrap:wrap;gap:6px;margin-bottom:14px;font-size:12.5px">
+    <a href="index.html" style="padding:6px 11px;border:1px solid #2a3140;border-radius:8px;text-decoration:none;color:#9aa7b8;background:#161b22">🇪🇸 Mis 5 equipos</a>
+    <a href="proxima-jornada.html" style="padding:6px 11px;border:1px solid #2a3140;border-radius:8px;text-decoration:none;color:#9aa7b8;background:#161b22">📅 Próxima jornada</a>
+    <a href="empate-jornada-esp.html" style="padding:6px 11px;border:1px solid #e3b341;border-radius:8px;text-decoration:none;color:#fff;background:#2a230d;font-weight:700">🎯 Por jornada (opcional)</a>
+  </nav>
+
+  <h1>🎯 Empate por Jornada — España <span style="font-size:12px;color:var(--warn)">· OPCIONAL</span></h1>
+  <div class="sub">Estrategia distinta a la de por equipo · apuestas al empate de la jornada · NO se sigue rigurosamente</div>
+
+  <div class="box opt">
+    <b>ℹ️ Esta estrategia está en pausa / opcional.</b> Después de la J3 dejaste de correrla. La dejo aquí solo como referencia histórica. Si algún día la quieres retomar, sería con reglas claras (tope de pasos) para no repetir lo que pasó en la J3.
+  </div>
+
+  <div class="hero">
+    <div class="big">−$11,740</div>
+    <div class="cap">Resultado total de la estrategia (J2 + J3) · cerrada tras la J3</div>
+  </div>
+
+  <div class="kpis">
+    <span class="kpi">J2<b class="pos">+$960</b></span>
+    <span class="kpi">J3<b class="neg">−$12,700</b></span>
+    <span class="kpi">Total<b class="neg">−$11,740</b></span>
+    <span class="kpi">Estado<b style="font-size:14px;color:var(--warn)">Cerrada</b></span>
+  </div>
+
+  <h2>📉 Historial por jornada</h2>
+  <div class="scroll">
+  <table>
+    <thead><tr><th>Jornada</th><th>Qué pasó</th><th>Resultado</th></tr></thead>
+    <tbody>
+      <tr><td class="j">J2</td><td style="text-align:left">Cayó el empate en la progresión</td><td class="pos">+$960</td></tr>
+      <tr><td class="j">J3</td><td style="text-align:left">10 partidos sin ningún empate</td><td class="neg">−$12,700</td></tr>
+    </tbody>
+    <tfoot><tr><td>Total</td><td></td><td class="neg">−$11,740</td></tr></tfoot>
+  </table>
+  </div>
+
+  <div class="box alert">
+    <b>🧨 Lo que pasó en la J3.</b> La martingala escaló $100 → $200 → $400 → $800 → $1,600 → $3,200 → $6,400 sin que cayera ningún empate (7 apuestas perdidas = −$12,700), y la 8ª de $12,500 se recuperó por cash-out. Esa jornada te dejó sin banca y tuviste que hacer el reingreso de $15,550. <b>Es exactamente el riesgo de no poner tope.</b>
+  </div>
+
+  <div class="box">
+    <b>✅ ¿Y el hoyo de los −$12,700?</b> Ya está tapado por lo demás: empate por equipo +$10,050, tenis/otras +$5,910 y la J2 de aquí (+$960) suman +$16,920, que cubrieron la pérdida y dejaron tu cuenta <b>+$4,220</b> neto sobre lo depositado. No te falta dinero.
+  </div>
+
+  <footer>
+    Referencia histórica. Estrategia opcional, no en seguimiento activo. Ninguna apuesta es segura; la martingala sin tope tiene riesgo de cola real. Juega con responsabilidad.
+  </footer>
+</div>
+</body>
+</html>
