@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Balance General · Apuestas</title>
+<style>
+  :root{--bg:#0d1117;--panel:#161b22;--line:#2a3140;--txt:#e6edf3;--mut:#9aa7b8;
+    --pos:#3fb950;--neg:#f85149;--accent:#58a6ff;--warn:#e3b341;}
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--txt);
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;line-height:1.45}
+  .wrap{max-width:880px;margin:0 auto;padding:24px 14px 70px}
+  h1{font-size:23px;margin:8px 0 4px}
+  .sub{color:var(--mut);font-size:13px;margin-bottom:16px}
+  .hero{background:linear-gradient(135deg,#12331d,#161b22);border:1px solid #234a2e;border-radius:16px;padding:20px 22px;text-align:center;margin-bottom:10px}
+  .hero .big{font-size:clamp(34px,9vw,52px);font-weight:800;line-height:1;letter-spacing:-1px;color:var(--pos)}
+  .hero .cap{color:var(--mut);font-size:12.5px;margin-top:6px}
+  .kpis{display:flex;flex-wrap:wrap;gap:9px;margin:0 0 8px}
+  .kpi{flex:1;min-width:150px;background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:11px 14px}
+  .kpi .k{font-size:10.5px;color:var(--mut);text-transform:uppercase;letter-spacing:.04em}
+  .kpi .v{font-size:20px;font-weight:800;margin-top:3px}
+  .scroll{overflow-x:auto;border:1px solid var(--line);border-radius:12px;margin-top:6px}
+  table{width:100%;border-collapse:collapse;font-size:13px;min-width:460px}
+  th,td{padding:10px 12px;border-bottom:1px solid #1c232e;text-align:right}
+  th:first-child,td:first-child{text-align:left}
+  th{color:var(--mut);font-size:10.5px;text-transform:uppercase;letter-spacing:.04em;background:#121824}
+  td.cat{font-weight:700;white-space:nowrap}
+  .pos{color:var(--pos)}.neg{color:var(--neg)}
+  tfoot td{font-weight:800;background:#0f1620;border-top:2px solid var(--line)}
+  h2{font-size:15px;margin:24px 0 8px}
+  .box{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:13px 15px;font-size:12.5px;margin-top:12px}
+  .box b{color:#fff}
+  .good{background:#0d2a18;border:1px solid #1e6b3e;color:#a6e9c1}.good b{color:#fff}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <nav style="display:flex;flex-wrap:wrap;gap:6px;margin-bottom:14px;font-size:12.5px">
+    <a href="index.html" style="padding:6px 11px;border:1px solid #2a3140;border-radius:8px;text-decoration:none;color:#9aa7b8;background:#161b22">🏠 Inicio</a>
+    <a href="balance-general.html" style="padding:6px 11px;border:1px solid #58a6ff;border-radius:8px;text-decoration:none;color:#fff;background:#12233a;font-weight:700">💰 Balance</a>
+    <a href="resto-apuestas.html" style="padding:6px 11px;border:1px solid #2a3140;border-radius:8px;text-decoration:none;color:#9aa7b8;background:#161b22">🎾 El resto</a>
+    <a href="seguimiento-esp.html" style="padding:6px 11px;border:1px solid #2a3140;border-radius:8px;text-decoration:none;color:#9aa7b8;background:#161b22">🇪🇸 5 equipos</a>
+    <a href="empate-jornada-j3.html" style="padding:6px 11px;border:1px solid #2a3140;border-radius:8px;text-decoration:none;color:#9aa7b8;background:#161b22">🎯 Por jornada</a>
+  </nav>
+
+  <h1>💰 Balance General</h1>
+  <div class="sub">Desde el 20 de agosto de 2026 · cuadrado con el saldo real de la cuenta</div>
+
+  <div class="hero">
+    <div class="big">+$4,220</div>
+    <div class="cap">Ganancia neta total (todas las apuestas) · saldo actual $29,770</div>
+  </div>
+
+  <h2>🧮 Reconciliación de cuenta</h2>
+  <div class="scroll">
+  <table>
+    <tbody>
+      <tr><td class="cat">Depósito inicial (20-ago)</td><td>$10,000</td></tr>
+      <tr><td class="cat">Reingreso (jornada sin empate)</td><td>$15,550</td></tr>
+      <tr><td class="cat">Total depositado</td><td><b>$25,550</b></td></tr>
+      <tr><td class="cat">Saldo actual</td><td><b>$29,770</b></td></tr>
+    </tbody>
+    <tfoot><tr><td>Ganancia neta (saldo − depositado)</td><td class="pos">+$4,220</td></tr></tfoot>
+  </table>
+  </div>
+
+  <h2>📊 Ganado / perdido por categoría</h2>
+  <div class="scroll">
+  <table>
+    <thead><tr><th>Categoría</th><th>Balance</th></tr></thead>
+    <tbody>
+      <tr><td class="cat">Empate por equipo</td><td class="pos">+$10,050</td></tr>
+      <tr><td class="cat">Empate por jornada</td><td class="neg">−$11,740</td></tr>
+      <tr><td class="cat">Tenis + otras (lo demás)</td><td class="pos">+$5,910</td></tr>
+    </tbody>
+    <tfoot><tr><td>TOTAL</td><td class="pos">+$4,220</td></tr></tfoot>
+  </table>
+  </div>
+  <div class="box">Las dos estrategias de empate las tengo <b>exactas</b> (equipo +$10,050, jornada −$11,740). El "tenis + otras" sale por <b>resta contra tu saldo real</b> ($4,220 total − (−$1,690) de empates = +$5,910), así que <b>cuadra al centavo</b> con la cuenta.</div>
+
+  <div class="good">
+    <b>✅ ¿Te falta dinero? No — estás arriba.</b> Si solo contaras el reingreso y la pérdida grande: $25,550 − $12,700 = $12,850. Pero tienes $29,770, o sea <b>$16,920 más</b>. Ese extra son tus ganancias (Betis cobró $11,520, Alavés $6,080, tenis neto +…) que taparon el hoyo del −$12,700 y dejaron <b>+$4,220 neto</b>.
+  </div>
+
+  <h2>❓ ¿Cuánto me falta para compensar los −$12,700?</h2>
+  <div class="good">
+    <b>Nada — ya está compensado, y de sobra.</b> Ese −$12,700 ya lo taparon tus ganancias de todo lo demás:<br>
+    • Empate por equipo <b class="pos">+$10,050</b> · Resto (tenis+otras) <b class="pos">+$5,910</b> · J2 por jornada <b class="pos">+$960</b> = <b class="pos">+$16,920</b> ganados.<br>
+    $16,920 ganados − $12,700 perdidos = <b class="pos">+$4,220</b>. El hoyo quedó cubierto y aún te sobran +$4,220.
+  </div>
+  <div class="box">
+    <b>Otra forma de leerlo (si te refieres solo a esa estrategia):</b> la de <b>empate por jornada</b> por sí sola está en <b class="neg">−$11,740</b> (perdió $12,700 en J3, ganó $960 en J2). Para dejar <i>esa estrategia sola</i> en cero necesitarías <b>+$11,740</b> más de ella — pero está <b>cerrada desde la J3</b>, así que no la vas a recuperar dentro de ella. A nivel de <b>cuenta</b>, que es lo que importa para tu bolsillo, ya la compensaste con las otras y estás <b>+$4,220</b>.
+  </div>
+
+  <div class="box">
+    <b>Detalle de las estrategias de empate:</b><br>
+    • <b>Por equipo</b> (+$10,050): Betis +$5,220, Alavés +$3,190, Rayo +$840, Sevilla +$780, R. Sociedad +$20. 7 empates.<br>
+    • <b>Por jornada</b> (−$11,740): J2 +$960, J3 −$12,700 (la jornada sin ningún empate). Cerrada en J3.<br>
+    Ver tenis y otras en <a href="resto-apuestas.html" style="color:var(--accent)">🎾 El resto</a>.
+  </div>
+</div>
+</body>
+</html>

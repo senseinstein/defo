@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>El Resto · Tenis y Otras</title>
+<style>
+  :root{--bg:#0d1117;--panel:#161b22;--line:#2a3140;--txt:#e6edf3;--mut:#9aa7b8;
+    --pos:#3fb950;--neg:#f85149;--accent:#58a6ff;--warn:#e3b341;}
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--txt);
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;line-height:1.45}
+  .wrap{max-width:880px;margin:0 auto;padding:24px 14px 70px}
+  h1{font-size:23px;margin:8px 0 4px}
+  .sub{color:var(--mut);font-size:13px;margin-bottom:14px}
+  .kpis{display:flex;flex-wrap:wrap;gap:9px;margin:0 0 8px}
+  .kpi{background:var(--panel);border:1px solid var(--line);border-radius:11px;padding:9px 13px;font-size:12.5px}
+  .kpi b{font-size:17px;display:block;margin-top:2px}
+  .scroll{overflow-x:auto;border:1px solid var(--line);border-radius:12px;margin-top:6px}
+  table{width:100%;border-collapse:collapse;font-size:13px;min-width:440px}
+  th,td{padding:8px 11px;border-bottom:1px solid #1c232e;text-align:right}
+  th:first-child,td:first-child{text-align:left}
+  th{color:var(--mut);font-size:10.5px;text-transform:uppercase;letter-spacing:.04em;background:#121824}
+  td.m{font-weight:600;white-space:nowrap}
+  .pos{color:var(--pos)}.neg{color:var(--neg)}.zero{color:var(--mut)}
+  tfoot td{font-weight:800;background:#0f1620;border-top:2px solid var(--line)}
+  h2{font-size:15px;margin:24px 0 8px}
+  .box{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:13px 15px;font-size:12.5px;margin-top:12px}
+  .box b{color:#fff}
+  .alert{background:#241c10;border:1px solid #4a3a13;color:#e3c98e}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <nav style="display:flex;flex-wrap:wrap;gap:6px;margin-bottom:14px;font-size:12.5px">
+    <a href="index.html" style="padding:6px 11px;border:1px solid #2a3140;border-radius:8px;text-decoration:none;color:#9aa7b8;background:#161b22">🏠 Inicio</a>
+    <a href="balance-general.html" style="padding:6px 11px;border:1px solid #2a3140;border-radius:8px;text-decoration:none;color:#9aa7b8;background:#161b22">💰 Balance</a>
+    <a href="resto-apuestas.html" style="padding:6px 11px;border:1px solid #58a6ff;border-radius:8px;text-decoration:none;color:#fff;background:#12233a;font-weight:700">🎾 El resto</a>
+    <a href="seguimiento-esp.html" style="padding:6px 11px;border:1px solid #2a3140;border-radius:8px;text-decoration:none;color:#9aa7b8;background:#161b22">🇪🇸 5 equipos</a>
+  </nav>
+
+  <h1>🎾 El Resto — Tenis y Otras</h1>
+  <div class="sub">Apuestas fuera de las estrategias de empate · total cuadrado con el saldo real de la cuenta</div>
+
+  <div class="kpis">
+    <span class="kpi">Neto real (todo el resto)<b class="pos">+$5,910</b></span>
+    <span class="kpi">Tenis identificado<b class="pos">≈ +$3,700</b></span>
+    <span class="kpi">Otras identificado<b class="pos">≈ +$75</b></span>
+    <span class="kpi">Sin identificar aún<b class="pos">≈ +$2,135</b></span>
+  </div>
+
+  <div class="box good" style="background:#0d2a18;border:1px solid #1e6b3e;color:#a6e9c1">
+    <b>✅ El número exacto del "resto" es +$5,910.</b> Sale por reconciliación con tu cuenta: neto total <b>+$4,220</b> − (empates: +$10,050 equipo − $11,740 jornada = −$1,690) = <b>+$5,910</b>. La tabla de abajo es el <b>detalle parcial</b> que pude identificar de las páginas (+$3,775); los ≈ <b>+$2,135</b> restantes son tenis ganador de las páginas que aún faltan.
+  </div>
+
+  <h2>🎾 Tenis — neto por partido</h2>
+  <div class="scroll">
+  <table>
+    <thead><tr><th>Partido</th><th>Neto</th></tr></thead>
+    <tbody>
+      <tr><td class="m">Khachanov vs Blockx</td><td class="pos">+$3,500</td></tr>
+      <tr><td class="m">Zverev vs Botic V.d.Z.</td><td class="pos">+$2,000</td></tr>
+      <tr><td class="m">Peyton Stearns vs Stephens</td><td class="pos">+$1,867</td></tr>
+      <tr><td class="m">Felix vs Rinderknech</td><td class="pos">+$1,100</td></tr>
+      <tr><td class="m">Shelton vs Tsitsipas</td><td class="pos">+$1,011</td></tr>
+      <tr><td class="m">Kostyuk vs Samsonova</td><td class="pos">+$1,000</td></tr>
+      <tr><td class="m">Frech vs Jovic</td><td class="pos">+$900</td></tr>
+      <tr><td class="m">Shelton vs Alcaraz</td><td class="pos">+$800</td></tr>
+      <tr><td class="m">Khachanov vs Tien</td><td class="pos">+$700</td></tr>
+      <tr><td class="m">Kalinskaya vs Navarro</td><td class="pos">+$500</td></tr>
+      <tr><td class="m">Bucsa vs Jovic</td><td class="pos">+$400</td></tr>
+      <tr><td class="m">Swiatek vs Zheng</td><td class="pos">+$290</td></tr>
+      <tr><td class="m">Sonmez vs Jovic</td><td class="pos">+$110</td></tr>
+      <tr><td class="m">Sabalenka vs Noskova</td><td class="zero">$0</td></tr>
+      <tr><td class="m">De Minaur vs Majchrzak</td><td class="neg">−$50</td></tr>
+      <tr><td class="m">Pegula vs Navarro</td><td class="neg">−$50</td></tr>
+      <tr><td class="m">Jovic vs Gauff</td><td class="neg">−$100</td></tr>
+      <tr><td class="m">Andreeva vs Gauff</td><td class="neg">−$300</td></tr>
+      <tr><td class="m">Gea vs Botic V.d.Z.</td><td class="neg">−$300</td></tr>
+      <tr><td class="m">Cerúndolo vs Blockx</td><td class="neg">−$1,290</td></tr>
+      <tr><td class="m">Zverev vs Shelton</td><td class="neg">−$1,335</td></tr>
+      <tr><td class="m">Zverev vs Tabilo</td><td class="neg">−$1,500</td></tr>
+      <tr><td class="m">Tiafoe vs Michelsen</td><td class="neg">−$2,550</td></tr>
+      <tr><td class="m">Samsonova vs Stearns</td><td class="neg">−$3,000</td></tr>
+    </tbody>
+    <tfoot><tr><td>Total tenis (parcial)</td><td class="pos">≈ +$3,700</td></tr></tfoot>
+  </table>
+  </div>
+
+  <h2>🎲 Otras (Premier, Liga MX, empates LaLiga sueltos)</h2>
+  <div class="scroll">
+  <table>
+    <thead><tr><th>Apuesta</th><th>Monto</th><th>Neto</th></tr></thead>
+    <tbody>
+      <tr><td class="m">Athletic–Elche (empate LaLiga)</td><td>$300</td><td class="pos">+$1,035</td></tr>
+      <tr><td class="m">Levante–Athletic (empate)</td><td>$400</td><td class="zero">$0 anulada</td></tr>
+      <tr><td class="m">Chivas–Tijuana (Liga MX)</td><td>$100</td><td class="zero">$0 recuperada</td></tr>
+      <tr><td class="m">América–Chivas</td><td>$20</td><td class="neg">−$20</td></tr>
+      <tr><td class="m">América–Chivas</td><td>$65.50</td><td class="neg">−$65.50</td></tr>
+      <tr><td class="m">Parlay Liga MX (18-sep)</td><td>$166</td><td class="neg">−$166</td></tr>
+      <tr><td class="m">Parlay Liga MX (21-jul)</td><td>$100</td><td class="neg">−$100</td></tr>
+      <tr><td class="m">Brentford–Chelsea (Premier)</td><td>$208.67</td><td class="neg">−$208.67</td></tr>
+      <tr><td class="m">Malaga–Villarreal (empate)</td><td>$400</td><td class="neg">−$400</td></tr>
+    </tbody>
+    <tfoot><tr><td>Total otras (parcial)</td><td></td><td class="pos">≈ +$75</td></tr></tfoot>
+  </table>
+  </div>
+
+  <div class="box alert">
+    <b>⚠️ Parcial.</b> Sale de ~16 de tus 22 páginas de historial. Faltan páginas (posible tenis del 10-11 y 14-15 sep, y las 18-22 de antes del 20-ago). El neto real de tenis puede subir o bajar cuando complete las páginas.
+  </div>
+
+  <div class="box">
+    <b>Nota:</b> el tenis fue casi todo <b>martingala por partido</b> (varias boletas al mismo partido subiendo el monto hasta acertar). Sale positivo en conjunto, pero cargó mucho volumen y riesgo: hubo partidos que costaron −$2,000 a −$3,000 (Samsonova–Stearns, Tiafoe–Michelsen). Para cerrar el número exacto, mándame las páginas que faltan.
+  </div>
+</div>
+</body>
+</html>
