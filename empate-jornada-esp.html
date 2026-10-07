@@ -65,11 +65,12 @@
   <div class="box" style="margin-top:4px">
     Todos los partidos <b>en el orden en que se juegan</b>. Recorres la lista de arriba hacia abajo apostando el empate; los <b>grandes</b> (Madrid, Barça, Atlético) se <b>saltan</b>. Meta: <b>2 empates</b> por jornada — si el 1er empate cae <b>después del 4º partido apostado</b>, te conformas con 1. "Prob. empate" solo orienta cuáles tienen más chance; el orden lo marca el horario.
   </div>
+  <div id="tzline" style="color:var(--mut);font-size:12px;margin:8px 2px 0">🕒 Horarios en hora de España; se ajustan a tu zona horaria al abrir la página.</div>
   <div class="scroll">
   <table class="fix">
     <thead><tr><th>#</th><th>Fecha y hora</th><th>Partido</th><th class="pr">Prob. empate</th><th>Estado</th></tr></thead>
     <tbody>
-      <tr><td class="num">1</td><td>Vie 9 · 21:00</td><td>Málaga vs Espanyol</td><td class="pr">28%</td><td><span class="chip bet">APOSTAR</span></td></tr>
+      <tr><td class="num">1</td><td class="t" data-utc="2026-10-09T19:00:00Z">Vie 9 · 21:00 (ESP)</td><td>Málaga vs Espanyol</td><td class="pr">28%</td><td><span class="chip bet">APOSTAR</span></td></tr>
       <tr class="skiprow"><td class="num">—</td><td>Dom 11 · PC</td><td>Alavés vs <b>Atlético</b></td><td class="pr">24%</td><td><span class="chip skip">SALTAR (grande)</span></td></tr>
       <tr class="skiprow"><td class="num">—</td><td>Dom 11 · PC</td><td><b>Barcelona</b> vs Getafe</td><td class="pr">20%</td><td><span class="chip skip">SALTAR (grande)</span></td></tr>
       <tr class="skiprow"><td class="num">—</td><td>Dom 11 · PC</td><td><b>Real Madrid</b> vs Villarreal</td><td class="pr">22%</td><td><span class="chip skip">SALTAR (grande)</span></td></tr>
@@ -78,12 +79,12 @@
       <tr class="toprow"><td class="num">4</td><td>Dom 11 · PC</td><td><b>Betis vs Osasuna</b></td><td class="pr">34%</td><td><span class="chip top">APOSTAR · TOP</span></td></tr>
       <tr><td class="num">5</td><td>Dom 11 · PC</td><td>Rayo vs Athletic</td><td class="pr">30%</td><td><span class="chip bet">APOSTAR</span></td></tr>
       <tr><td class="num">6</td><td>Dom 11 · PC</td><td>R. Sociedad vs Deportivo</td><td class="pr">31%</td><td><span class="chip bet">APOSTAR</span></td></tr>
-      <tr><td class="num">7</td><td>Lun 12 · 21:00</td><td>Levante vs Sevilla</td><td class="pr">30%</td><td><span class="chip bet">APOSTAR</span></td></tr>
+      <tr><td class="num">7</td><td class="t" data-utc="2026-10-12T19:00:00Z">Lun 12 · 21:00 (ESP)</td><td>Levante vs Sevilla</td><td class="pr">30%</td><td><span class="chip bet">APOSTAR</span></td></tr>
     </tbody>
   </table>
   </div>
   <div class="box" style="font-size:11.5px;color:var(--mut)">
-    Horas en <b>hora de España</b> (México ≈ 8 h menos). ⚠️ LaLiga solo confirmó el <b>viernes</b> (Málaga-Espanyol) y el <b>lunes</b> (Levante-Sevilla); los 8 partidos del sáb/dom están <b>por confirmar (PC)</b>, así que el orden (#) de esos puede moverse — verifícalo el día previo. <b>7 apostables, 3 se saltan</b> (los 3 son grande-vs-no-grande; no hay grande-vs-grande esta jornada). Las probabilidades de empate son estimadas.
+    Las horas se <b>ajustan solas a tu zona horaria</b> (ej.: Málaga-Espanyol = 21:00 España = <b>1:00 PM en Guadalajara</b>). ⚠️ LaLiga solo confirmó el <b>viernes</b> (Málaga-Espanyol) y el <b>lunes</b> (Levante-Sevilla); los 8 partidos del sáb/dom están <b>por confirmar (PC)</b>, así que el orden (#) de esos puede moverse — verifícalo el día previo. <b>7 apostables, 3 se saltan</b> (los 3 son grande-vs-no-grande; no hay grande-vs-grande esta jornada). Las probabilidades de empate son estimadas.
   </div>
 
   <div class="hero">
@@ -122,5 +123,24 @@
     Referencia + orden de apuesta de la jornada. Estrategia opcional, no en seguimiento activo. Fixtures J8: LaLiga/futbolweb; horarios sáb/dom por confirmar. Probabilidades estimadas; ninguna apuesta es segura. Juega con responsabilidad.
   </footer>
 </div>
+<script>
+(function(){
+  try{
+    var tz = Intl.DateTimeFormat().resolvedOptions().timeZone || "tu zona";
+    var fmt = new Intl.DateTimeFormat('es', {weekday:'short', day:'numeric', hour:'2-digit', minute:'2-digit', hour12:true});
+    document.querySelectorAll('td.t[data-utc]').forEach(function(td){
+      try{
+        var d = new Date(td.getAttribute('data-utc'));
+        if(!isNaN(d)){
+          var s = fmt.format(d).replace(/\./g,'');
+          td.textContent = s.charAt(0).toUpperCase() + s.slice(1);
+        }
+      }catch(e){}
+    });
+    var line = document.getElementById('tzline');
+    if(line) line.textContent = '🕒 Horarios en tu zona horaria (' + tz + '). Los partidos marcados "PC" aún no tienen hora oficial de LaLiga.';
+  }catch(e){}
+})();
+</script>
 </body>
 </html>
