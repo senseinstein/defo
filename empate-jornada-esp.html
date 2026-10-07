@@ -44,6 +44,12 @@
   .chip.skip{background:#2a0d0d;color:#ff8a80;border:1px solid #6b1e1e}
   tr.skiprow td{opacity:.5}
   tr.toprow td{background:#0d2016}
+  table.fix tbody tr{cursor:pointer}
+  table.fix tbody tr:hover td{background:#182230}
+  table.fix td.go{color:var(--accent);font-weight:800;text-align:center}
+  .chip.real{background:#2a230d;color:#e3b341;border:1px solid #6b591e}
+  .chip.sim{background:#0d2438;color:#7fb8ff;border:1px solid #1e4a6b}
+  .chip.pend{background:#1a2028;color:#9aa7b8;border:1px solid #2a3140}
 </style>
 </head>
 <body>
@@ -68,21 +74,22 @@
   <div id="tzline" style="color:var(--mut);font-size:12px;margin:8px 2px 0">🕒 Horarios en hora de España; se ajustan a tu zona horaria al abrir la página.</div>
   <div class="scroll">
   <table class="fix">
-    <thead><tr><th>#</th><th>Fecha y hora</th><th>Partido</th><th class="pr">Prob. empate</th><th>Estado</th></tr></thead>
+    <thead><tr><th>#</th><th>Fecha y hora</th><th>Partido</th><th class="pr">Prob. empate</th><th>Estado</th><th></th></tr></thead>
     <tbody>
-      <tr><td class="num">1</td><td class="t" data-utc="2026-10-09T19:00:00Z">Vie 9 · 21:00 (ESP)</td><td>Málaga vs Espanyol</td><td class="pr">28%</td><td><span class="chip bet">APOSTAR</span></td></tr>
-      <tr class="skiprow"><td class="num">—</td><td>Dom 11 · PC</td><td>Alavés vs <b>Atlético</b></td><td class="pr">24%</td><td><span class="chip skip">SALTAR (grande)</span></td></tr>
-      <tr class="skiprow"><td class="num">—</td><td>Dom 11 · PC</td><td><b>Barcelona</b> vs Getafe</td><td class="pr">20%</td><td><span class="chip skip">SALTAR (grande)</span></td></tr>
-      <tr class="skiprow"><td class="num">—</td><td>Dom 11 · PC</td><td><b>Real Madrid</b> vs Villarreal</td><td class="pr">22%</td><td><span class="chip skip">SALTAR (grande)</span></td></tr>
-      <tr><td class="num">2</td><td>Dom 11 · PC</td><td>Racing vs Valencia</td><td class="pr">29%</td><td><span class="chip bet">APOSTAR</span></td></tr>
-      <tr><td class="num">3</td><td>Dom 11 · PC</td><td>Elche vs Celta</td><td class="pr">30%</td><td><span class="chip bet">APOSTAR</span></td></tr>
-      <tr class="toprow"><td class="num">4</td><td>Dom 11 · PC</td><td><b>Betis vs Osasuna</b></td><td class="pr">34%</td><td><span class="chip top">APOSTAR · TOP</span></td></tr>
-      <tr><td class="num">5</td><td>Dom 11 · PC</td><td>Rayo vs Athletic</td><td class="pr">30%</td><td><span class="chip bet">APOSTAR</span></td></tr>
-      <tr><td class="num">6</td><td>Dom 11 · PC</td><td>R. Sociedad vs Deportivo</td><td class="pr">31%</td><td><span class="chip bet">APOSTAR</span></td></tr>
-      <tr><td class="num">7</td><td class="t" data-utc="2026-10-12T19:00:00Z">Lun 12 · 21:00 (ESP)</td><td>Levante vs Sevilla</td><td class="pr">30%</td><td><span class="chip bet">APOSTAR</span></td></tr>
+      <tr onclick="location.href='analisis-empate-j8.html#malaga-espanyol'"><td class="num">1</td><td class="t" data-utc="2026-10-09T19:00:00Z">Vie 9 · 21:00 (ESP)</td><td>Málaga vs Espanyol</td><td class="pr">28%</td><td><span class="chip bet">APOSTAR</span></td><td class="go">›</td></tr>
+      <tr class="skiprow" onclick="location.href='analisis-empate-j8.html#alaves-atletico'"><td class="num">—</td><td>Dom 11 · PC</td><td>Alavés vs <b>Atlético</b></td><td class="pr">24%</td><td><span class="chip skip">SALTAR (grande)</span></td><td class="go">›</td></tr>
+      <tr class="skiprow" onclick="location.href='analisis-empate-j8.html#barcelona-getafe'"><td class="num">—</td><td>Dom 11 · PC</td><td><b>Barcelona</b> vs Getafe</td><td class="pr">20%</td><td><span class="chip skip">SALTAR (grande)</span></td><td class="go">›</td></tr>
+      <tr class="skiprow" onclick="location.href='analisis-empate-j8.html#realmadrid-villarreal'"><td class="num">—</td><td>Dom 11 · PC</td><td><b>Real Madrid</b> vs Villarreal</td><td class="pr">22%</td><td><span class="chip skip">SALTAR (grande)</span></td><td class="go">›</td></tr>
+      <tr onclick="location.href='analisis-empate-j8.html#racing-valencia'"><td class="num">2</td><td>Dom 11 · PC</td><td>Racing vs Valencia</td><td class="pr">29%</td><td><span class="chip bet">APOSTAR</span></td><td class="go">›</td></tr>
+      <tr onclick="location.href='analisis-empate-j8.html#elche-celta'"><td class="num">3</td><td>Dom 11 · PC</td><td>Elche vs Celta</td><td class="pr">30%</td><td><span class="chip bet">APOSTAR</span></td><td class="go">›</td></tr>
+      <tr class="toprow" onclick="location.href='analisis-empate-j8.html#betis-osasuna'"><td class="num">4</td><td>Dom 11 · PC</td><td><b>Betis vs Osasuna</b></td><td class="pr">34%</td><td><span class="chip top">APOSTAR · TOP</span></td><td class="go">›</td></tr>
+      <tr onclick="location.href='analisis-empate-j8.html#rayo-athletic'"><td class="num">5</td><td>Dom 11 · PC</td><td>Rayo vs Athletic</td><td class="pr">30%</td><td><span class="chip bet">APOSTAR</span></td><td class="go">›</td></tr>
+      <tr onclick="location.href='analisis-empate-j8.html#rsociedad-deportivo'"><td class="num">6</td><td>Dom 11 · PC</td><td>R. Sociedad vs Deportivo</td><td class="pr">31%</td><td><span class="chip bet">APOSTAR</span></td><td class="go">›</td></tr>
+      <tr onclick="location.href='analisis-empate-j8.html#levante-sevilla'"><td class="num">7</td><td class="t" data-utc="2026-10-12T19:00:00Z">Lun 12 · 21:00 (ESP)</td><td>Levante vs Sevilla</td><td class="pr">30%</td><td><span class="chip bet">APOSTAR</span></td><td class="go">›</td></tr>
     </tbody>
   </table>
   </div>
+  <div style="color:var(--mut);font-size:12px;margin:6px 2px 0">👆 Toca un partido para ver <b>por qué es o no viable el empate</b>.</div>
   <div class="box" style="font-size:11.5px;color:var(--mut)">
     Las horas se <b>ajustan solas a tu zona horaria</b> (ej.: Málaga-Espanyol = 21:00 España = <b>1:00 PM en Guadalajara</b>). ⚠️ LaLiga solo confirmó el <b>viernes</b> (Málaga-Espanyol) y el <b>lunes</b> (Levante-Sevilla); los 8 partidos del sáb/dom están <b>por confirmar (PC)</b>, así que el orden (#) de esos puede moverse — verifícalo el día previo. <b>7 apostables, 3 se saltan</b> (los 3 son grande-vs-no-grande; no hay grande-vs-grande esta jornada). Las probabilidades de empate son estimadas.
   </div>
@@ -99,16 +106,24 @@
     <span class="kpi">Estado<b style="font-size:14px;color:var(--warn)">Cerrada</b></span>
   </div>
 
-  <h2>📉 Historial por jornada</h2>
+  <h2>📉 Historial por jornada <span style="font-size:12px;color:var(--mut)">(real + simulación de seguir la estrategia)</span></h2>
   <div class="scroll">
   <table>
-    <thead><tr><th>Jornada</th><th>Qué pasó</th><th>Resultado</th></tr></thead>
+    <thead><tr><th>Jornada</th><th>Tipo</th><th class="pr">Empates aptos</th><th>Resultado</th></tr></thead>
     <tbody>
-      <tr><td class="j">J2</td><td style="text-align:left">Cayó el empate en la progresión</td><td class="pos">+$960</td></tr>
-      <tr><td class="j">J3</td><td style="text-align:left">10 partidos sin ningún empate</td><td class="neg">−$12,700</td></tr>
+      <tr><td class="j">J2</td><td><span class="chip real">JUGADO</span></td><td class="pr">4</td><td class="pos" style="text-align:right">+$960</td></tr>
+      <tr><td class="j">J3</td><td><span class="chip real">JUGADO</span></td><td class="pr">0</td><td class="neg" style="text-align:right">−$12,700</td></tr>
+      <tr><td class="j">J4</td><td><span class="chip sim">SIMULADO</span></td><td class="pr">3</td><td class="pos" style="text-align:right">+$1,280</td></tr>
+      <tr><td class="j">J5</td><td><span class="chip sim">SIMULADO</span></td><td class="pr">3</td><td class="pos" style="text-align:right">+$440</td></tr>
+      <tr><td class="j">J6</td><td><span class="chip sim">SIMULADO</span></td><td class="pr">1*</td><td class="neg" style="text-align:right">−$2,880</td></tr>
+      <tr><td class="j">J7</td><td><span class="chip sim">SIMULADO</span></td><td class="pr">3</td><td class="pos" style="text-align:right">+$560</td></tr>
+      <tr><td class="j">J8</td><td><span class="chip pend">PENDIENTE</span></td><td class="pr">—</td><td class="zero" style="text-align:right">ver arriba</td></tr>
     </tbody>
-    <tfoot><tr><td>Total</td><td></td><td class="neg">−$11,740</td></tr></tfoot>
+    <tfoot><tr><td>Total J2-J7 (si hubieras seguido)</td><td></td><td class="pr"></td><td class="neg" style="text-align:right">−$12,340</td></tr></tfoot>
   </table>
+  </div>
+  <div class="box" style="font-size:11.5px;color:var(--mut)">
+    <b>JUGADO</b> = lo que realmente apostaste (J2 y J3). <b>SIMULADO</b> = qué habría pasado si hubieras seguido corriendo ExJ (con los resultados reales de cada jornada). "Empates aptos" = empates que cayeron en partidos apostables (sin grandes). <b>*J6</b> solo tuvo 1 (Levante-Athletic quedó pospuesto al 21-oct). Simulación en orden aproximado por horario y momio 3.20 — es ilustrativa; el real variaría según el orden exacto y los momios. <b>Lección:</b> aunque ganes casi todas las jornadas, la de 0 empates (J3) se come todo lo demás.
   </div>
 
   <div class="box alert">

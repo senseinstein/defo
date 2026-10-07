@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Análisis de Empate · Jornada 8</title>
+<style>
+  :root{--bg:#0d1117;--panel:#161b22;--line:#2a3140;--txt:#e6edf3;--mut:#9aa7b8;
+    --pos:#3fb950;--neg:#f85149;--accent:#58a6ff;--warn:#e3b341;}
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--txt);
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;line-height:1.5}
+  .wrap{max-width:820px;margin:0 auto;padding:20px 16px 70px}
+  h1{font-size:21px;margin:8px 0 4px}
+  .sub{color:var(--mut);font-size:13px;margin-bottom:14px}
+  .card{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:15px 16px;margin:12px 0;scroll-margin-top:14px}
+  .card.top{border-color:#1e4a6b;box-shadow:0 0 0 1px #11314d inset}
+  .card.skip{opacity:.82}
+  .mh{display:flex;justify-content:space-between;align-items:flex-start;gap:10px;flex-wrap:wrap}
+  .mt{font-size:16px;font-weight:800;margin:0}
+  .mt .vs{color:var(--mut);font-weight:600;font-size:13px}
+  .prob{font-size:22px;font-weight:800;line-height:1}
+  .prob span{display:block;font-size:10px;color:var(--mut);font-weight:600;text-transform:uppercase;letter-spacing:.04em;text-align:right}
+  .chip{display:inline-block;font-size:10px;font-weight:800;padding:3px 9px;border-radius:6px;margin-top:4px}
+  .chip.bet{background:#0d2a18;color:#5ddc86;border:1px solid #1e6b3e}
+  .chip.top{background:#0d2438;color:#7fb8ff;border:1px solid #1e4a6b}
+  .chip.skip{background:#2a0d0d;color:#ff8a80;border:1px solid #6b1e1e}
+  .cols{display:flex;flex-wrap:wrap;gap:12px;margin-top:10px}
+  .col{flex:1;min-width:210px}
+  .col h4{margin:0 0 5px;font-size:11px;text-transform:uppercase;letter-spacing:.04em}
+  .col.pro h4{color:var(--pos)}.col.con h4{color:var(--neg)}
+  .col ul{margin:0;padding-left:16px;font-size:12.5px;color:#d7e0ea}
+  .col li{margin-bottom:4px}
+  .verd{margin-top:10px;font-size:12.5px;padding:9px 12px;border-radius:9px;background:#0f1620;border:1px solid var(--line)}
+  .verd b{color:#fff}
+  nav a{padding:6px 11px;border:1px solid #2a3140;border-radius:8px;text-decoration:none;color:#9aa7b8;background:#161b22;font-size:12.5px}
+  footer{color:#6b7686;font-size:11.5px;margin-top:30px;border-top:1px solid var(--line);padding-top:12px}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <nav style="display:flex;flex-wrap:wrap;gap:6px;margin-bottom:14px">
+    <a href="empate-jornada-esp.html">← Volver a orden de apuesta</a>
+    <a href="index.html">🇪🇸 Mis 5 equipos</a>
+  </nav>
+
+  <h1>🔎 Análisis de empate — Jornada 8</h1>
+  <div class="sub">Por qué cada partido es (o no) viable para apostar al empate. Probabilidades estimadas con tasa de empate histórica + forma de este torneo + perfil del duelo. No son cuotas; ninguna apuesta es segura.</div>
+
+  <div class="card top" id="betis-osasuna">
+    <div class="mh"><div class="mt">Real Betis <span class="vs">vs</span> Osasuna</div><div class="prob">34%<span>Prob. empate</span></div></div>
+    <div><span class="chip top">APOSTAR · TOP</span></div>
+    <div class="cols">
+      <div class="col pro"><h4>A favor del empate</h4><ul>
+        <li>Betis es de los más empatadores de LaLiga (≈35% en 2 temporadas) y ya empató en la J7.</li>
+        <li>Osasuna es un equipo <b>de bajo gol y muy igualado</b>: muchos de sus partidos se deciden por 1 gol o acaban en tablas.</li>
+        <li>Duelo parejo de media tabla, sin un favorito claro; a ninguno le urge arriesgar.</li>
+      </ul></div>
+      <div class="col con"><h4>En contra</h4><ul>
+        <li>Betis de local a veces impone y gana sin sufrir.</li>
+        <li>Si Osasuna se mete atrás, Betis puede romper el 0-0 tarde.</li>
+      </ul></div>
+    </div>
+    <div class="verd"><b>Veredicto:</b> el <b>mejor</b> de la jornada para el empate. Dos equipos empatadores y de bajo gol enfrentados — máximo valor.</div>
+  </div>
+
+  <div class="card" id="rsociedad-deportivo">
+    <div class="mh"><div class="mt">Real Sociedad <span class="vs">vs</span> Deportivo</div><div class="prob">31%<span>Prob. empate</span></div></div>
+    <div><span class="chip bet">APOSTAR</span></div>
+    <div class="cols">
+      <div class="col pro"><h4>A favor del empate</h4><ul>
+        <li>Deportivo (recién ascendido) rinde mejor de lo esperado y no es goleado fácil; viene de empatar.</li>
+        <li>La Real ha estado irregular este torneo (varias derrotas), no es un favorito aplastante en casa.</li>
+        <li>Partido de fuerzas parejas: el visitante va a cerrarse y jugar al error.</li>
+      </ul></div>
+      <div class="col con"><h4>En contra</h4><ul>
+        <li>En Anoeta la Real suele generar mucho y puede llevarse los 3 puntos.</li>
+        <li>La Real empata poco (≈26%).</li>
+      </ul></div>
+    </div>
+    <div class="verd"><b>Veredicto:</b> viable. Duelo igualado donde el ascendido buscará el empate; buen valor pero no de los más seguros.</div>
+  </div>
+
+  <div class="card" id="elche-celta">
+    <div class="mh"><div class="mt">Elche <span class="vs">vs</span> Celta</div><div class="prob">30%<span>Prob. empate</span></div></div>
+    <div><span class="chip bet">APOSTAR</span></div>
+    <div class="cols">
+      <div class="col pro"><h4>A favor del empate</h4><ul>
+        <li>Elche es un ascendido ordenado que ya sacó tablas ante rivales fuertes (p. ej. Athletic).</li>
+        <li>Celta es muy irregular (golea un día, no marca al siguiente); fuera de casa se conforma.</li>
+        <li>Dos plantillas de nivel similar, sin favorito marcado.</li>
+      </ul></div>
+      <div class="col con"><h4>En contra</h4><ul>
+        <li>Celta tiene arreones goleadores (le metió 5 a Racing) que rompen el equilibrio.</li>
+      </ul></div>
+    </div>
+    <div class="verd"><b>Veredicto:</b> viable. Partido parejo de media tabla; el empate tiene lógica.</div>
+  </div>
+
+  <div class="card" id="rayo-athletic">
+    <div class="mh"><div class="mt">Rayo <span class="vs">vs</span> Athletic</div><div class="prob">30%<span>Prob. empate</span></div></div>
+    <div><span class="chip bet">APOSTAR</span></div>
+    <div class="cols">
+      <div class="col pro"><h4>A favor del empate</h4><ul>
+        <li>Rayo es muy empatador (≈35%) y ya firmó tablas en la J7 (Osasuna).</li>
+        <li>Athletic fuera de San Mamés baja su pegada y acepta el reparto; viene de empatar 0-0.</li>
+        <li>Vallecas es un campo incómodo que nivela a los visitantes.</li>
+      </ul></div>
+      <div class="col con"><h4>En contra</h4><ul>
+        <li>El Athletic es claramente mejor plantilla; si entra fino, gana.</li>
+      </ul></div>
+    </div>
+    <div class="verd"><b>Veredicto:</b> viable. Rayo empata seguido y el Athletic de visita se frena; valor correcto.</div>
+  </div>
+
+  <div class="card" id="levante-sevilla">
+    <div class="mh"><div class="mt">Levante <span class="vs">vs</span> Sevilla</div><div class="prob">30%<span>Prob. empate</span></div></div>
+    <div><span class="chip bet">APOSTAR</span></div>
+    <div class="cols">
+      <div class="col pro"><h4>A favor del empate</h4><ul>
+        <li>Dos equipos en apuros y de bajo rendimiento: ninguno domina con claridad.</li>
+        <li>El Sevilla de visita ha estado flojo; el Levante en casa puede plantarle cara.</li>
+      </ul></div>
+      <div class="col con"><h4>En contra</h4><ul>
+        <li>El Levante encaja mucho; puede ser un partido abierto con goles y ganador.</li>
+        <li>Ambos necesitan puntos y pueden arriesgar, rompiendo el empate.</li>
+      </ul></div>
+    </div>
+    <div class="verd"><b>Veredicto:</b> viable pero con reservas. Igualdad por abajo, aunque la defensa floja del Levante mete ruido.</div>
+  </div>
+
+  <div class="card" id="racing-valencia">
+    <div class="mh"><div class="mt">Racing <span class="vs">vs</span> Valencia</div><div class="prob">29%<span>Prob. empate</span></div></div>
+    <div><span class="chip bet">APOSTAR</span></div>
+    <div class="cols">
+      <div class="col pro"><h4>A favor del empate</h4><ul>
+        <li>El Valencia de visita no es fiable y suele sufrir; el Racing en casa aprieta.</li>
+        <li>Partido entre un ascendido ilusionado y un grande venido a menos: se puede nivelar.</li>
+      </ul></div>
+      <div class="col con"><h4>En contra</h4><ul>
+        <li><b>El Racing encaja muchísimo</b> (le metieron 7 el Barça, 5 el Celta): sus partidos tienen goles, no tablas.</li>
+      </ul></div>
+    </div>
+    <div class="verd"><b>Veredicto:</b> el <b>más flojo</b> de los apostables. La fragilidad defensiva del Racing empuja a partidos con ganador, no a empate.</div>
+  </div>
+
+  <div class="card" id="malaga-espanyol">
+    <div class="mh"><div class="mt">Málaga <span class="vs">vs</span> Espanyol</div><div class="prob">28%<span>Prob. empate</span></div></div>
+    <div><span class="chip bet">APOSTAR</span></div>
+    <div class="cols">
+      <div class="col pro"><h4>A favor del empate</h4><ul>
+        <li>Málaga (ascendido) y Espanyol son de los equipos de menor nivel ofensivo; partidos cerrados.</li>
+        <li>Sin favorito claro; el visitante se conforma con el punto.</li>
+      </ul></div>
+      <div class="col con"><h4>En contra</h4><ul>
+        <li>Málaga en casa empuja y puede quedarse los 3 puntos ante un Espanyol irregular.</li>
+        <li>Es el partido que <b>abre la jornada</b> (vie): sin referencias previas, más incertidumbre.</li>
+      </ul></div>
+    </div>
+    <div class="verd"><b>Veredicto:</b> apostable pero del montón. Bajo gol ayuda al empate; nivel parejo pero volátil.</div>
+  </div>
+
+  <div class="card skip" id="alaves-atletico">
+    <div class="mh"><div class="mt">Alavés <span class="vs">vs</span> Atlético</div><div class="prob">24%<span>Prob. empate</span></div></div>
+    <div><span class="chip skip">SALTAR (grande)</span></div>
+    <div class="cols">
+      <div class="col con"><h4>Por qué se salta</h4><ul>
+        <li>Filtro anti-grandes: el <b>Atlético</b> gana demasiado y empata poco, baja mucho la probabilidad.</li>
+        <li>Atlético llega fuerte (goleó a Osasuna 4-0, ganó el derbi a Madrid); es favorito claro de visita.</li>
+      </ul></div>
+      <div class="col pro"><h4>Matiz</h4><ul>
+        <li>Alavés en casa puede incomodar, pero no compensa el riesgo: por eso <b>no se apuesta</b>.</li>
+      </ul></div>
+    </div>
+    <div class="verd"><b>Veredicto:</b> se salta. (En tu estrategia de <i>por equipo</i>, Alavés sí se apuesta; aquí, en <i>por jornada</i>, el filtro excluye al Atlético.)</div>
+  </div>
+
+  <div class="card skip" id="realmadrid-villarreal">
+    <div class="mh"><div class="mt">Real Madrid <span class="vs">vs</span> Villarreal</div><div class="prob">22%<span>Prob. empate</span></div></div>
+    <div><span class="chip skip">SALTAR (grande)</span></div>
+    <div class="cols">
+      <div class="col con"><h4>Por qué se salta</h4><ul>
+        <li>Filtro anti-grandes: el <b>Real Madrid</b> en casa gana la gran mayoría; probabilidad de empate muy baja.</li>
+        <li>Villarreal es bueno, pero visitar al Madrid casi nunca termina en tablas.</li>
+      </ul></div>
+    </div>
+    <div class="verd"><b>Veredicto:</b> se salta por filtro. Empate improbable.</div>
+  </div>
+
+  <div class="card skip" id="barcelona-getafe">
+    <div class="mh"><div class="mt">Barcelona <span class="vs">vs</span> Getafe</div><div class="prob">20%<span>Prob. empate</span></div></div>
+    <div><span class="chip skip">SALTAR (grande)</span></div>
+    <div class="cols">
+      <div class="col con"><h4>Por qué se salta</h4><ul>
+        <li>Filtro anti-grandes: el <b>Barça</b> en casa golea (venía de 7-2 al Racing); rara vez empata.</li>
+        <li>El Getafe es defensivo, pero el salto de nivel es enorme.</li>
+      </ul></div>
+    </div>
+    <div class="verd"><b>Veredicto:</b> se salta por filtro. El de menor probabilidad de empate de la jornada.</div>
+  </div>
+
+  <footer>
+    Análisis orientativo (tasa de empate 2 temporadas + forma 2026-27 + perfil del duelo). No son cuotas de casa ni garantía. Juega con responsabilidad.
+  </footer>
+</div>
+</body>
+</html>
