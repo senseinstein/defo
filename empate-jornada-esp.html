@@ -33,6 +33,17 @@
   .alert{background:#2a0d0d;border:1px solid #6b1e1e;color:#ffb3ad}.alert b{color:#fff}
   .opt{background:#241c10;border:1px solid #4a3a13;color:#e3c98e}.opt b{color:#fff}
   footer{color:#6b7686;font-size:11.5px;margin-top:34px;border-top:1px solid var(--line);padding-top:12px}
+  /* tabla de orden de apuesta */
+  table.fix{min-width:540px}
+  table.fix th,table.fix td{text-align:left}
+  table.fix td.pr{text-align:right;font-variant-numeric:tabular-nums}
+  table.fix td.num{text-align:center;font-weight:800;color:var(--mut)}
+  .chip{display:inline-block;font-size:10px;font-weight:800;padding:3px 9px;border-radius:6px;white-space:nowrap}
+  .chip.bet{background:#0d2a18;color:#5ddc86;border:1px solid #1e6b3e}
+  .chip.top{background:#0d2438;color:#7fb8ff;border:1px solid #1e4a6b}
+  .chip.skip{background:#2a0d0d;color:#ff8a80;border:1px solid #6b1e1e}
+  tr.skiprow td{opacity:.5}
+  tr.toprow td{background:#0d2016}
 </style>
 </head>
 <body>
@@ -47,12 +58,37 @@
   <div class="sub">Estrategia distinta a la de por equipo · apuestas al empate de la jornada · NO se sigue rigurosamente</div>
 
   <div class="box opt">
-    <b>ℹ️ Esta estrategia está en pausa / opcional.</b> Después de la J3 dejaste de correrla. La dejo aquí solo como referencia histórica. Si algún día la quieres retomar, sería con reglas claras (tope de pasos) para no repetir lo que pasó en la J3.
+    <b>ℹ️ Esta estrategia está en pausa / opcional.</b> Después de la J3 dejaste de correrla. La dejo aquí como referencia y con el orden de apuesta de la jornada por si la retomas — siempre con tope de pasos para no repetir lo de la J3.
+  </div>
+
+  <h2>🗓️ Orden de apuesta — Jornada 8 <span style="font-size:12px;color:var(--mut)">(9-12 oct 2026)</span></h2>
+  <div class="box" style="margin-top:4px">
+    Todos los partidos <b>en el orden en que se juegan</b>. Recorres la lista de arriba hacia abajo apostando el empate; los <b>grandes</b> (Madrid, Barça, Atlético) se <b>saltan</b>. Meta: <b>2 empates</b> por jornada — si el 1er empate cae <b>después del 4º partido apostado</b>, te conformas con 1. "Prob. empate" solo orienta cuáles tienen más chance; el orden lo marca el horario.
+  </div>
+  <div class="scroll">
+  <table class="fix">
+    <thead><tr><th>#</th><th>Fecha y hora</th><th>Partido</th><th class="pr">Prob. empate</th><th>Estado</th></tr></thead>
+    <tbody>
+      <tr><td class="num">1</td><td>Vie 9 · 21:00</td><td>Málaga vs Espanyol</td><td class="pr">28%</td><td><span class="chip bet">APOSTAR</span></td></tr>
+      <tr class="skiprow"><td class="num">—</td><td>Dom 11 · PC</td><td>Alavés vs <b>Atlético</b></td><td class="pr">24%</td><td><span class="chip skip">SALTAR (grande)</span></td></tr>
+      <tr class="skiprow"><td class="num">—</td><td>Dom 11 · PC</td><td><b>Barcelona</b> vs Getafe</td><td class="pr">20%</td><td><span class="chip skip">SALTAR (grande)</span></td></tr>
+      <tr class="skiprow"><td class="num">—</td><td>Dom 11 · PC</td><td><b>Real Madrid</b> vs Villarreal</td><td class="pr">22%</td><td><span class="chip skip">SALTAR (grande)</span></td></tr>
+      <tr><td class="num">2</td><td>Dom 11 · PC</td><td>Racing vs Valencia</td><td class="pr">29%</td><td><span class="chip bet">APOSTAR</span></td></tr>
+      <tr><td class="num">3</td><td>Dom 11 · PC</td><td>Elche vs Celta</td><td class="pr">30%</td><td><span class="chip bet">APOSTAR</span></td></tr>
+      <tr class="toprow"><td class="num">4</td><td>Dom 11 · PC</td><td><b>Betis vs Osasuna</b></td><td class="pr">34%</td><td><span class="chip top">APOSTAR · TOP</span></td></tr>
+      <tr><td class="num">5</td><td>Dom 11 · PC</td><td>Rayo vs Athletic</td><td class="pr">30%</td><td><span class="chip bet">APOSTAR</span></td></tr>
+      <tr><td class="num">6</td><td>Dom 11 · PC</td><td>R. Sociedad vs Deportivo</td><td class="pr">31%</td><td><span class="chip bet">APOSTAR</span></td></tr>
+      <tr><td class="num">7</td><td>Lun 12 · 21:00</td><td>Levante vs Sevilla</td><td class="pr">30%</td><td><span class="chip bet">APOSTAR</span></td></tr>
+    </tbody>
+  </table>
+  </div>
+  <div class="box" style="font-size:11.5px;color:var(--mut)">
+    Horas en <b>hora de España</b> (México ≈ 8 h menos). ⚠️ LaLiga solo confirmó el <b>viernes</b> (Málaga-Espanyol) y el <b>lunes</b> (Levante-Sevilla); los 8 partidos del sáb/dom están <b>por confirmar (PC)</b>, así que el orden (#) de esos puede moverse — verifícalo el día previo. <b>7 apostables, 3 se saltan</b> (los 3 son grande-vs-no-grande; no hay grande-vs-grande esta jornada). Las probabilidades de empate son estimadas.
   </div>
 
   <div class="hero">
     <div class="big">−$11,740</div>
-    <div class="cap">Resultado total de la estrategia (J2 + J3) · cerrada tras la J3</div>
+    <div class="cap">Resultado histórico de la estrategia (J2 + J3) · cerrada tras la J3</div>
   </div>
 
   <div class="kpis">
@@ -83,7 +119,7 @@
   </div>
 
   <footer>
-    Referencia histórica. Estrategia opcional, no en seguimiento activo. Ninguna apuesta es segura; la martingala sin tope tiene riesgo de cola real. Juega con responsabilidad.
+    Referencia + orden de apuesta de la jornada. Estrategia opcional, no en seguimiento activo. Fixtures J8: LaLiga/futbolweb; horarios sáb/dom por confirmar. Probabilidades estimadas; ninguna apuesta es segura. Juega con responsabilidad.
   </footer>
 </div>
 </body>
