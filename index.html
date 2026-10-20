@@ -32,7 +32,7 @@
   h2{font-size:15px;margin:24px 0 8px}
   .nextlist{list-style:none;padding:0;margin:0}
   .nextlist li{display:flex;justify-content:space-between;gap:10px;padding:9px 12px;border:1px solid var(--line);border-radius:10px;margin-bottom:7px;background:var(--panel);font-size:13px}
-  .nextlist .amt{font-weight:800}.amt.b{color:var(--accent)}
+  .nextlist .amt{font-weight:800}.amt.b{color:var(--accent)}.amt.o{color:#6b7686}
   .box{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:13px 15px;font-size:12.5px;margin-top:12px}
   .box b{color:#fff}
   .good{background:#0d2a18;border:1px solid #1e6b3e;color:#a6e9c1}.good b{color:#fff}
@@ -44,7 +44,7 @@
   .acct .t{color:var(--mut);font-size:11px;text-transform:uppercase;letter-spacing:.04em}
   .acct .v{font-size:22px;font-weight:800;margin-top:2px}
   tfoot td{font-weight:800;background:#0f1620;border-top:2px solid var(--line)}
-  table.matrix{min-width:920px}
+  table.matrix{min-width:1010px}
   table.matrix th,table.matrix td{text-align:center;border:1px solid #1c232e}
   table.matrix th:first-child,table.matrix td:first-child{position:sticky;left:0;z-index:1}
   table.matrix td.team{text-align:left;background:#111722;box-shadow:1px 0 0 #2a3140}
@@ -58,6 +58,7 @@
   .c.pend{background:#211a0b;color:#e3b341;outline:1px solid #4a3a13;outline-offset:-2px}
   .c.anul{background:#1a2028;color:#9aa7b8}
   .c.next{background:#0d2438;color:#7fb8ff;outline:1px solid #1e4a6b;outline-offset:-2px}
+  .c.tope{background:#2a1416;color:#ff9a94;outline:1px solid #6b1e1e;outline-offset:-2px}
   footer{color:#6b7686;font-size:11.5px;margin-top:34px;border-top:1px solid var(--line);padding-top:12px}
   .lead{color:var(--mut);font-size:12.5px;margin:2px 2px 0}
 </style>
@@ -72,7 +73,7 @@
   </nav>
 
   <h1><span style="color:var(--es)">🇪🇸</span> Empate por Equipo — Mis 8 Equipos</h1>
-  <div class="sub">LaLiga 2026-27 · base $100 · ×2 al perder · reinicia al empatar · tope en el paso 6 · J8 cerrada · J9 apostada · ➕ Villarreal, Celta y Getafe entran en J9</div>
+  <div class="sub">LaLiga 2026-27 · base $100 · ×2 al perder · reinicia al empatar · tope en el paso 6 · <b style="color:#e3b341">J9 cerrada −$900</b> · J10 pendiente · ⚠️ R. Sociedad llega al tope $3,200</div>
 
   <div class="split">
     <div class="acct b">
@@ -82,21 +83,21 @@
     </div>
     <div class="acct b">
       <div class="t">Utilidad acumulada</div>
-      <div class="v pos">+$9,950</div>
-      <div style="color:var(--mut);margin-top:3px">J8 completa</div>
+      <div class="v pos">+$9,050</div>
+      <div style="color:var(--mut);margin-top:3px">J9 cerrada −$900</div>
     </div>
     <div class="acct a">
       <div class="t">Saldo (cachibache)</div>
-      <div class="v pos">$19,950</div>
-      <div style="color:var(--mut);margin-top:3px">= $10,000 banca + $9,950 utilidad</div>
+      <div class="v pos">$19,050</div>
+      <div style="color:var(--mut);margin-top:3px">= $10,000 banca + $9,050 utilidad</div>
     </div>
   </div>
 
   <div class="kpis">
-    <span class="kpi">Empates (este torneo)<b>8</b></span>
-    <span class="kpi">J8 cerrada<b class="neg" style="font-size:14px">−$100</b></span>
-    <span class="kpi">J9 apostada<b>$2,300</b></span>
+    <span class="kpi">Empates (este torneo)<b>11</b></span>
+    <span class="kpi">J9 cerrada<b class="neg" style="font-size:14px">−$900</b></span>
     <span class="kpi">Equipos activos<b>8</b></span>
+    <span class="kpi">R. Sociedad J10<b class="neg" style="font-size:13px">tope $3,200</b></span>
     <span class="kpi">Tope por equipo<b>$3,200</b></span>
   </div>
 
@@ -104,26 +105,26 @@
   <div class="lead">Racha = partidos apostables sin empatar desde su último empate. Monto máx = la apuesta más alta a la que ha llegado esta temporada.</div>
   <div class="scroll">
   <table>
-    <thead><tr><th>Equipo</th><th class="n">Empates torneo</th><th class="n">Racha actual</th><th class="n">Racha máx</th><th class="n">Monto máx</th><th class="n">Utilidad</th><th>Próx. J9</th><th>Último (J8)</th></tr></thead>
+    <thead><tr><th>Equipo</th><th class="n">Empates torneo</th><th class="n">Racha actual</th><th class="n">Racha máx</th><th class="n">Monto máx</th><th class="n">Utilidad</th><th>Próx. J10</th><th>Último (J9)</th></tr></thead>
     <tbody>
-      <tr><td class="team">Real Betis</td><td class="n">1</td><td class="n warn">1</td><td class="n">5</td><td class="n warn">$3,200</td><td class="n pos">+$5,120</td><td><span class="chip" style="background:#2a0d0d;color:#ff8a80">⊘ se salta</span></td><td class="neg">❌ vs Osasuna (5-2)</td></tr>
-      <tr><td class="team">Alavés</td><td class="n">2</td><td class="n warn">1</td><td class="n">4</td><td class="n">$1,600</td><td class="n pos">+$3,090</td><td><span class="chip c-next">$200</span></td><td class="neg">❌ vs Atlético (1-2)</td></tr>
-      <tr><td class="team">Rayo</td><td class="n">2</td><td class="n pos">0</td><td class="n">2</td><td class="n">$400</td><td class="n pos">+$840</td><td><span class="chip" style="background:#211a0b;color:#e3b341">$200 ⏳</span></td><td>⊘ anulada (0-0)</td></tr>
-      <tr><td class="team">Sevilla</td><td class="n">2</td><td class="n pos">0</td><td class="n">2</td><td class="n">$400</td><td class="n pos">+$1,680</td><td><span class="chip" style="background:#2a0d0d;color:#ff8a80">⊘ se salta</span></td><td class="pos">✅ @ Levante (3-3)</td></tr>
-      <tr><td class="team">R. Sociedad</td><td class="n">1</td><td class="n neg">4</td><td class="n">4</td><td class="n warn">$800</td><td class="n neg">−$780</td><td><span class="chip c-next">$1,600</span></td><td class="neg">❌ vs Depor (3-2)</td></tr>
-      <tr><td class="team">Villarreal <span class="chip" style="background:#12331d;color:#7fe0a0">➕ nuevo</span></td><td class="n">0</td><td class="n">0</td><td class="n">0</td><td class="n">$100</td><td class="n">$0</td><td><span class="chip" style="background:#211a0b;color:#e3b341">$100 ⏳ debut</span></td><td style="color:var(--mut)">— se suma</td></tr>
-      <tr><td class="team">Celta <span class="chip" style="background:#12331d;color:#7fe0a0">➕ nuevo</span></td><td class="n">0</td><td class="n">0</td><td class="n">0</td><td class="n">$100</td><td class="n">$0</td><td><span class="chip" style="background:#211a0b;color:#e3b341">$100 ⏳ =Alavés</span></td><td style="color:var(--mut)">— se suma</td></tr>
-      <tr><td class="team">Getafe <span class="chip" style="background:#12331d;color:#7fe0a0">➕ nuevo</span></td><td class="n">0</td><td class="n">0</td><td class="n">0</td><td class="n">$100</td><td class="n">$0</td><td><span class="chip" style="background:#211a0b;color:#e3b341">$100 ⏳ =Rayo</span></td><td style="color:var(--mut)">— se suma</td></tr>
+      <tr><td class="team">Real Betis</td><td class="n">1</td><td class="n warn">1</td><td class="n">5</td><td class="n warn">$3,200</td><td class="n pos">+$5,120</td><td><span class="chip c-next">$200 ❄️</span></td><td style="color:var(--mut)">⊘ se saltó (Barça)</td></tr>
+      <tr><td class="team">Alavés</td><td class="n">2</td><td class="n warn">2</td><td class="n">4</td><td class="n">$1,600</td><td class="n pos">+$2,890</td><td><span class="chip c-next">$400</span></td><td class="neg">❌ @ Celta (1-2)</td></tr>
+      <tr><td class="team">Rayo</td><td class="n">3</td><td class="n pos">0</td><td class="n">2</td><td class="n">$400</td><td class="n pos">+$1,240</td><td><span class="chip c-next">$100</span></td><td class="pos">✅ @ Getafe (1-1)</td></tr>
+      <tr><td class="team">Sevilla</td><td class="n">2</td><td class="n pos">0</td><td class="n">2</td><td class="n">$400</td><td class="n pos">+$1,680</td><td><span class="chip c-next">$100 ❄️</span></td><td style="color:var(--mut)">⊘ se saltó (Madrid)</td></tr>
+      <tr><td class="team">R. Sociedad</td><td class="n">1</td><td class="n neg">5</td><td class="n neg">5</td><td class="n warn">$1,600</td><td class="n neg">−$2,380</td><td><span class="chip" style="background:#2a0d0d;color:#ff8a80">$3,200 ⚠️ TOPE</span></td><td class="neg">❌ @ Málaga (2-5)</td></tr>
+      <tr><td class="team">Villarreal <span class="chip" style="background:#12331d;color:#7fe0a0">➕</span></td><td class="n">1</td><td class="n pos">0</td><td class="n">1</td><td class="n">$100</td><td class="n pos">+$400</td><td><span class="chip c-next">$100</span></td><td class="pos">✅ vs Elche (0-0)</td></tr>
+      <tr><td class="team">Celta <span class="chip" style="background:#12331d;color:#7fe0a0">➕</span></td><td class="n">0</td><td class="n warn">1</td><td class="n">1</td><td class="n">$100</td><td class="n neg">−$100</td><td><span class="chip c-next">$200</span></td><td class="neg">❌ vs Alavés (2-1)</td></tr>
+      <tr><td class="team">Getafe <span class="chip" style="background:#12331d;color:#7fe0a0">➕</span></td><td class="n">1</td><td class="n pos">0</td><td class="n">1</td><td class="n">$100</td><td class="n pos">+$200</td><td><span class="chip c-next">$100</span></td><td class="pos">✅ vs Rayo (1-1)</td></tr>
     </tbody>
-    <tfoot><tr><td>Total</td><td class="n">8</td><td class="n"></td><td class="n"></td><td class="n"></td><td class="n pos">+$9,950</td><td></td><td></td></tr></tfoot>
+    <tfoot><tr><td>Total</td><td class="n">11</td><td class="n"></td><td class="n"></td><td class="n"></td><td class="n pos">+$9,050</td><td></td><td></td></tr></tfoot>
   </table>
   </div>
 
   <h2>📉 Progresión de montos por jornada (desde la J1)</h2>
-  <div class="lead">Cada celda: el monto apostado y el resultado. <span style="color:#7fe0a0">Verde</span> = empató (cobra y reinicia a $100). <span style="color:#ff9a94">Rojo</span> = no empató (dobla). <span style="color:#6b7686">Gris</span> = omitido (vs Madrid/Barça). <span style="color:#7fb8ff">Azul</span> = próxima. Desliza → para ver todas las jornadas.</div>
+  <div class="lead">Cada celda: el monto apostado y el resultado. <span style="color:#7fe0a0">Verde</span> = empató (cobra y reinicia a $100). <span style="color:#ff9a94">Rojo</span> = no empató (dobla). <span style="color:#6b7686">Gris</span> = omitido (vs Madrid/Barça). <span style="color:#7fb8ff">Azul</span> = próxima (J10). Desliza → para ver todas las jornadas.</div>
   <div class="scroll">
   <table class="matrix">
-    <thead><tr><th>Equipo</th><th>J1</th><th>J2</th><th>J3</th><th>J4</th><th>J5</th><th>J6</th><th>J7</th><th>J8</th><th>J9</th></tr></thead>
+    <thead><tr><th>Equipo</th><th>J1</th><th>J2</th><th>J3</th><th>J4</th><th>J5</th><th>J6</th><th>J7</th><th>J8</th><th>J9</th><th>J10</th></tr></thead>
     <tbody>
       <tr>
         <td class="team">Real Betis</td>
@@ -136,6 +137,7 @@
         <td class="c win">$3,200<small>✅</small></td>
         <td class="c loss">$100<small>❌</small></td>
         <td class="c skip">—<small>⊘ Bar</small></td>
+        <td class="c next">$200<small>⏳</small></td>
       </tr>
       <tr>
         <td class="team">Alavés</td>
@@ -147,7 +149,8 @@
         <td class="c loss">$800<small>❌</small></td>
         <td class="c win">$1,600<small>✅</small></td>
         <td class="c loss">$100<small>❌</small></td>
-        <td class="c pend">$200<small>⏳</small></td>
+        <td class="c loss">$200<small>❌</small></td>
+        <td class="c next">$400<small>⏳</small></td>
       </tr>
       <tr>
         <td class="team">Rayo</td>
@@ -159,7 +162,8 @@
         <td class="c loss">$200<small>❌</small></td>
         <td class="c win">$400<small>✅</small></td>
         <td class="c anul">$100<small>⊘ anul</small></td>
-        <td class="c pend">$200<small>⏳</small></td>
+        <td class="c win">$200<small>✅</small></td>
+        <td class="c next">$100<small>⏳</small></td>
       </tr>
       <tr>
         <td class="team">Sevilla</td>
@@ -172,6 +176,7 @@
         <td class="c skip">—<small>⊘ Bar</small></td>
         <td class="c win">$400<small>✅</small></td>
         <td class="c skip">—<small>⊘ RM</small></td>
+        <td class="c next">$100<small>⏳</small></td>
       </tr>
       <tr>
         <td class="team">R. Sociedad</td>
@@ -183,71 +188,60 @@
         <td class="c win">$400<small>✅ᵇ</small></td>
         <td class="c loss">$400<small>❌</small></td>
         <td class="c loss">$800<small>❌</small></td>
-        <td class="c pend">$1,600<small>⏳</small></td>
+        <td class="c loss">$1,600<small>❌</small></td>
+        <td class="c tope">$3,200<small>⚠️ tope</small></td>
       </tr>
       <tr>
         <td class="team">Villarreal <span style="font-size:9px;color:#7fe0a0;font-weight:700">➕</span></td>
         <td class="c pre">—</td><td class="c pre">—</td><td class="c pre">—</td><td class="c pre">—</td><td class="c pre">—</td><td class="c pre">—</td><td class="c pre">—</td><td class="c pre">—</td>
-        <td class="c pend">$100<small>⏳</small></td>
+        <td class="c win">$100<small>✅</small></td>
+        <td class="c next">$100<small>⏳</small></td>
       </tr>
       <tr>
         <td class="team">Celta <span style="font-size:9px;color:#7fe0a0;font-weight:700">➕</span></td>
         <td class="c pre">—</td><td class="c pre">—</td><td class="c pre">—</td><td class="c pre">—</td><td class="c pre">—</td><td class="c pre">—</td><td class="c pre">—</td><td class="c pre">—</td>
-        <td class="c pend">$100<small>⏳ =Alav</small></td>
+        <td class="c loss">$100<small>❌ =Alav</small></td>
+        <td class="c next">$200<small>⏳</small></td>
       </tr>
       <tr>
         <td class="team">Getafe <span style="font-size:9px;color:#7fe0a0;font-weight:700">➕</span></td>
         <td class="c pre">—</td><td class="c pre">—</td><td class="c pre">—</td><td class="c pre">—</td><td class="c pre">—</td><td class="c pre">—</td><td class="c pre">—</td><td class="c pre">—</td>
-        <td class="c pend">$100<small>⏳ =Rayo</small></td>
+        <td class="c win">$100<small>✅ =Rayo</small></td>
+        <td class="c next">$100<small>⏳</small></td>
       </tr>
     </tbody>
   </table>
   </div>
   <div class="box good">
-    <b>➕ 3 equipos nuevos desde la J9: Villarreal, Celta y Getafe.</b> Entran en <b>paso 1 ($100)</b> cada uno. Se eligieron por <b>tasa de empate</b> (Celta ~33% real, Villarreal y Getafe ~29%), no por la racha. <b>Racing y Espanyol quedaron fuera</b> (~15-18%). Quedas con <b>8 equipos activos</b>.<br>
-    <span style="color:var(--mut)"><b>Ojo cara a cara (J9):</b> apostaste Celta y Getafe por separado, pero juegan contra tu <b>Alavés</b> y tu <b>Rayo</b> → mismo partido. Resultado: tienes <b>$300 en el empate Alavés-Celta</b> ($200+$100) y <b>$300 en Rayo-Getafe</b> ($200+$100) — más concentrado en esos dos duelos. Villarreal ($100 vs Elche) sí es un partido aparte.</span>
+    <b>➕ Debut J9 de los 3 nuevos: 2 de 3 cobraron.</b> <b style="color:#7fe0a0">Villarreal</b> empató 0-0 vs Elche (+$400) y <b style="color:#7fe0a0">Getafe</b> 1-1 vs Rayo (+$200). <b style="color:#ff9a94">Celta</b> perdió (2-1 vs Alavés, −$100). Para J10: Villarreal y Getafe reinician a $100, Celta sube a $200.<br>
+    <span style="color:var(--mut)"><b>Cara a cara:</b> Rayo-Getafe (1-1) hizo ganar las DOS boletas (Rayo $200 + Getafe $100 = +$600); Alavés-Celta (2-1) hizo perder las dos (−$300). Así se ve la concentración de apostar ambos equipos del mismo partido.</span>
   </div>
   <div class="box">
-    Se lee de izquierda a derecha: al perder, el monto se <b>dobla</b> (rojo va subiendo); al empatar, <b>cobra y vuelve a $100</b> (verde reinicia). <span style="color:#9aa7b8">⊘ anul</span> = apuesta anulada (Rayo 0-0: el partido empató pero la boleta se anuló, te devolvieron el stake). <b>J8 cerró en −$100:</b> Betis (5-2), Alavés (1-2) y R.Soc (3-2) no empataron y Rayo se anuló, pero <b>Sevilla empató 3-3</b> ($400 @ +225 → $1,300, +$900) y casi la deja en cero.
+    Se lee de izquierda a derecha: al perder, el monto se <b>dobla</b> (rojo va subiendo); al empatar, <b>cobra y vuelve a $100</b> (verde reinicia). <span style="color:#9aa7b8">⊘ anul</span> = apuesta anulada (Rayo J8 0-0: el partido empató pero la boleta se anuló, te devolvieron el stake). La columna <span style="color:#7fb8ff">J10</span> muestra el monto que toca a cada equipo la próxima jornada.
   </div>
   <div class="box good">
-    <b>✅ Datos confirmados con tus resultados reales (J1-J8).</b> Todo cuadra con tu balance por equipo (+$10,050). Notas de calendario:<br>
+    <b>✅ Datos confirmados con tus resultados reales (J1-J9).</b> Notas de calendario:<br>
     • <b>ᵃ Betis J1</b> (Valencia-Betis, 25-ago) se jugó <b>después</b> de la J2 (21-ago) por aplazamiento; por eso su J1 va en $200 y su J2 en $100.<br>
     • <b>ᵇ R. Sociedad J6</b> (vs Celta) se jugó <b>adelantado</b> el 3-sep (antes de J4/J5); ahí cayó su único empate ($400) y reinició.<br>
-    • <b>Sevilla, Alavés y Rayo</b> — su J1 (15-19 ago) fue <b>antes de tu inicio (20-ago)</b>, por eso no se apostó (—). <b>RM</b> = omitido vs Real Madrid · <b>Bar</b> = omitido vs Barcelona.
+    • <b>Sevilla, Alavés y Rayo</b> — su J1 (15-19 ago) fue <b>antes de tu inicio (20-ago)</b>, por eso no se apostó (—). <b>RM</b> = omitido vs Real Madrid · <b>Bar</b> = omitido vs Barcelona · <b>❄️</b> = monto congelado por saltarse.
   </div>
 
   <h2>🥅 Empates por temporada — histórico vs este torneo</h2>
   <div class="lead">Cuántos empates hizo cada equipo en LaLiga en los 2 torneos pasados, su tasa de empate y cómo van este torneo.</div>
   <div class="scroll">
   <table>
-    <thead><tr><th>Equipo</th><th class="n">2024-25</th><th class="n">2025-26</th><th class="n">Tasa empate (2 años)</th><th class="n">Este torneo (tras J7)</th></tr></thead>
+    <thead><tr><th>Equipo</th><th class="n">2024-25</th><th class="n">2025-26</th><th class="n">Tasa empate (2 años)</th><th class="n">Este torneo (tras J9)</th></tr></thead>
     <tbody>
       <tr><td class="team">Real Betis</td><td class="n">12</td><td class="n">15</td><td class="n pos">35.5%</td><td class="n">1</td></tr>
-      <tr><td class="team">Rayo</td><td class="n">13</td><td class="n">14</td><td class="n pos">35.5%</td><td class="n">2</td></tr>
+      <tr><td class="team">Rayo</td><td class="n">13</td><td class="n">14</td><td class="n pos">35.5%</td><td class="n">3</td></tr>
       <tr><td class="team">Alavés</td><td class="n">12</td><td class="n">10</td><td class="n">28.9%</td><td class="n">2</td></tr>
       <tr><td class="team">R. Sociedad</td><td class="n">7</td><td class="n">13</td><td class="n">26.3%</td><td class="n">1</td></tr>
-      <tr><td class="team">Sevilla</td><td class="n">11</td><td class="n">7</td><td class="n neg">23.7%</td><td class="n">1</td></tr>
+      <tr><td class="team">Sevilla</td><td class="n">11</td><td class="n">7</td><td class="n neg">23.7%</td><td class="n">2</td></tr>
     </tbody>
-    <tfoot><tr><td>Total 5 equipos</td><td class="n">55</td><td class="n">59</td><td class="n">≈ 30%</td><td class="n">7</td></tr></tfoot>
+    <tfoot><tr><td>Total 5 originales</td><td class="n">55</td><td class="n">59</td><td class="n">≈ 30%</td><td class="n">9</td></tr></tfoot>
   </table>
   </div>
-
-  <h2>📈 Ritmo de empates — ¿vamos adelantados o atrasados?</h2>
-  <div class="scroll">
-  <table>
-    <thead><tr><th>Punto del torneo</th><th class="n">Empates acumulados (5 equipos)</th></tr></thead>
-    <tbody>
-      <tr><td class="team">Este torneo — tras J7</td><td class="n neg">7</td></tr>
-      <tr><td class="team">Ritmo 2024-25 a estas alturas (estimado)</td><td class="n">≈ 10</td></tr>
-      <tr><td class="team">Ritmo 2025-26 a estas alturas (estimado)</td><td class="n">≈ 11</td></tr>
-    </tbody>
-  </table>
-  </div>
-  <div class="box alert">
-    <b>⚠️ Vamos ~3-4 empates por debajo del promedio histórico.</b> A estas alturas de las dos temporadas pasadas, tus 5 equipos ya llevarían ~10-11 empates; este torneo van <b>7</b>. Menos empates = <b>rachas más largas</b> y más presión sobre la martingala (por eso Betis llegó a $3,200). Si el ritmo se normaliza, deberían venir más empates en las próximas jornadas.
-    <br><span style="color:var(--mut)">El ritmo histórico es un <b>prorrateo</b> del total de la temporada (los empates no se reparten parejo, así que es una referencia, no un dato exacto por jornada).</span>
-  </div>
+  <div class="box"><b>+ Equipos nuevos (desde J9):</b> Villarreal (~29% tasa, 1 empate), Celta (~33% real, 1), Getafe (~29%, 1). Total 8 equipos = <b>11 empates</b> este torneo.</div>
 
   <h2>🧨 Riesgo de rachas — ¿qué tan larga puede ser una mala racha?</h2>
   <div class="lead">Con la tasa de empate de cada equipo, esto es la racha seca (sin empatar) más larga que es razonable esperar en una temporada y la apuesta a la que te llevaría sin tope.</div>
@@ -263,7 +257,7 @@
   </table>
   </div>
   <div class="box alert">
-    <b>La lección más importante.</b> Sevilla es el más peligroso: con solo ~24% de empate, una racha de 8 juegos sin empatar es <b>esperable al menos una vez por temporada</b>, y eso sin tope te lleva a apostar <b>$12,800–$25,600</b> en una sola boleta. Por eso el <b>tope en el paso 6 ($3,200)</b> no es opcional: convierte un desastre potencial en una pérdida acotada de máximo $6,300 por equipo. Los que más "aguantan" la martingala son Betis y Rayo (empatan seguido); los que más riesgo cargan son Sevilla y R. Sociedad.
+    <b>La lección, en vivo con R. Sociedad.</b> Lleva <b>5 partidos sin empatar</b> y en la J10 apuesta el <b>tope $3,200 (paso 6)</b>. Si no empata, aceptas la pérdida del tramo (~$6,300 acumulado) y reinicia a $100 — eso es exactamente lo que el tope te protege de que crezca más. Con ~24-26% de empate, estas rachas largas son esperables; el tope convierte un desastre en una pérdida acotada. Los que más "aguantan" son Betis y Rayo (empatan seguido); los que más riesgo cargan son Sevilla y R. Sociedad.
   </div>
 
   <h2>🎯 Dónde tienes más ventaja de empate</h2>
@@ -274,36 +268,47 @@
     • <b>Alavés</b> (29%) — mejor valor de local y ante rivales directos de la parte baja.<br>
     • <b>R. Sociedad</b> (26%) — más empates de visita ante equipos parejos; evita cuando es favorito claro en casa.<br>
     • <b>Sevilla</b> (24%) — el más flojo en empates; su mejor ventaja es en duelos entre equipos en crisis (bajo gol de ambos lados).<br>
-    <span style="color:var(--mut)">Recordatorio de la J8: casi todos tus partidos "con pinta de empate" NO empataron (Betis-Osasuna 5-2, R.Soc-Depor 3-2). El perfil ayuda, pero una jornada no garantiza nada — es valor a largo plazo, no certeza.</span>
+    • <b>Celta y Getafe</b> (~29-33%) y <b>Villarreal</b> (~29%) — nuevos: Celta y Getafe empatan seguido (buen perfil), Villarreal parejo de media tabla.<br>
+    <span style="color:var(--mut)">Recordatorio de la J9: Villarreal y Getafe empataron como se esperaba, pero R. Sociedad (perfil bueno) goleó 5-2 y no empató. El perfil ayuda, pero una jornada no garantiza nada — es valor a largo plazo, no certeza.</span>
   </div>
 
   <div class="box alert">
-    <b>J8 cerrada: −$100.</b> Betis (5-2), Alavés (1-2) y R. Sociedad (3-2) no empataron, y <b>Rayo empató 0-0 pero la boleta se anuló</b> ($0). <b>Sevilla la rescató:</b> empató 3-3 y su $400 pagó $1,300 (+$900). La utilidad apenas bajó de +$10,050 a <b>+$9,950</b>. <b>Ojo R. Sociedad:</b> va en $1,600 (paso 5); si no empata en J9, su siguiente sería <b>$3,200 (el tope)</b>.
+    <b>J9 cerrada: −$900.</b> Cobraron 3 empates: <b>Rayo</b> @ Getafe 1-1 (+$400), <b>Villarreal</b> 0-0 Elche (+$400) y <b>Getafe</b> vs Rayo 1-1 (+$200). Pero <b>R. Sociedad</b> volvió a fallar (Málaga 2-5, −$1,600) y <b>Alavés+Celta</b> cayeron en el 2-1 del Celta (−$300). Saldo: $19,950 → <b>$19,050</b>. <b>⚠️ R. Sociedad llega al tope $3,200 en la J10 (paso 6):</b> si no empata, aceptas la pérdida del tramo y reinicia a $100.
   </div>
 
   <h2>📅 Resultados recientes</h2>
   <ul class="nextlist">
-    <li><span><b>J5</b> Alavés @ Racing (2-1) ❌ · Sevilla vs Valencia (1-0) ❌ · Betis @ Villarreal (1-2) ❌ · R.Soc vs Atlético (0-3) ❌ · Rayo @ Madrid ⊘</span></li>
     <li><span><b>J6</b> Betis vs Getafe (1-0) ❌ · Sevilla @ Depor (0-1) ❌ · Alavés vs Valencia (0-1) ❌ · Rayo vs Espanyol (2-1) ❌ · R.Soc vs Celta (adelantado) ✅</span></li>
     <li><span><b>J7</b> <b class="pos">Betis @ Depor (1-1) ✅</b> · <b class="pos">Alavés @ Athletic (0-0) ✅</b> · <b class="pos">Rayo @ Osasuna (1-1) ✅</b> · R.Soc @ Valencia (2-3) ❌ · Sevilla vs Barça ⊘</span></li>
-    <li><span><b>J8</b> Betis vs Osasuna (5-2) ❌ <small style="color:#6b7686">+320</small> · Alavés vs Atlético (1-2) ❌ <small style="color:#6b7686">+275</small> · R.Soc vs Depor (3-2) ❌ <small style="color:#6b7686">+280</small> · Rayo vs Athletic (0-0) ⊘ anulada <small style="color:#6b7686">+233</small> · <b class="pos">Sevilla @ Levante (3-3) ✅</b> <small style="color:#6b7686">+225 → $1,300</small></span></li>
+    <li><span><b>J8</b> Betis vs Osasuna (5-2) ❌ · Alavés vs Atlético (1-2) ❌ · R.Soc vs Depor (3-2) ❌ · Rayo vs Athletic (0-0) ⊘ anulada · <b class="pos">Sevilla @ Levante (3-3) ✅</b> <small style="color:#6b7686">+225 → $1,300</small></span></li>
+    <li><span><b>J9</b> <b class="pos">Villarreal 0-0 Elche ✅</b> <small style="color:#6b7686">+400 → $500</small> · <b class="pos">Getafe 1-1 Rayo ✅</b> <small style="color:#6b7686">+200</small> · Alavés @ Celta (1-2) ❌ · R.Soc @ Málaga (2-5) ❌ <small style="color:#6b7686">+240</small> · Betis vs Barça (2-5) ⊘ · Sevilla @ Madrid (1-4) ⊘</span></li>
   </ul>
 
-  <h2>✅ Jornada 9 — apostada (pendiente)</h2>
+  <h2>✅ Jornada 9 — cerrada (−$900)</h2>
   <ul class="nextlist">
-    <li><span>⏳ <b>R. Sociedad</b> — @ Málaga · +240 · paga $5,440</span><span class="amt b">$1,600</span></li>
-    <li><span>⏳ <b>Alavés</b> — @ Celta · +220 · paga $640</span><span class="amt b">$200</span></li>
-    <li><span>⏳ <b>Celta</b> <span style="color:#7fe0a0">➕</span> — vs Alavés · +220 · paga $320 <small style="color:#9aa7b8">(mismo partido que Alavés)</small></span><span class="amt b">$100</span></li>
-    <li><span>⏳ <b>Rayo</b> — @ Getafe · +200 · paga $600</span><span class="amt b">$200</span></li>
-    <li><span>⏳ <b>Getafe</b> <span style="color:#7fe0a0">➕</span> — vs Rayo · +200 · paga $300 <small style="color:#9aa7b8">(mismo partido que Rayo)</small></span><span class="amt b">$100</span></li>
-    <li><span>⏳ <b>Villarreal</b> <span style="color:#7fe0a0">➕</span> — vs Elche · +400 · paga $500</span><span class="amt b">$100</span></li>
-    <li><span>⊘ <b>Betis</b> — vs Barcelona (se salta, congela $200)</span><span class="amt o">⊘</span></li>
-    <li><span>⊘ <b>Sevilla</b> — @ Real Madrid (se salta, congela $100)</span><span class="amt o">⊘</span></li>
+    <li><span>✅ <b>Villarreal</b> — 0-0 vs Elche · +400 · cobró $500</span><span class="amt" style="color:#7fe0a0">+$400</span></li>
+    <li><span>✅ <b>Rayo</b> — 1-1 @ Getafe · +200 · cobró $600</span><span class="amt" style="color:#7fe0a0">+$400</span></li>
+    <li><span>✅ <b>Getafe</b> — 1-1 vs Rayo · +200 · cobró $300</span><span class="amt" style="color:#7fe0a0">+$200</span></li>
+    <li><span>❌ <b>R. Sociedad</b> — Málaga 2-5 · no empató</span><span class="amt neg">−$1,600</span></li>
+    <li><span>❌ <b>Alavés</b> — 1-2 @ Celta · no empató</span><span class="amt neg">−$200</span></li>
+    <li><span>❌ <b>Celta</b> — 2-1 vs Alavés · no empató</span><span class="amt neg">−$100</span></li>
+    <li><span>⊘ <b>Betis</b> (vs Barça) y <b>Sevilla</b> (@ Madrid) — se saltaron</span><span class="amt o">⊘</span></li>
   </ul>
-  <div class="box">J9 apostada: <b>$2,300</b> en 6 boletas. Si los 4 partidos empataran, vuelven <b>$7,800</b>. <b>Ojo:</b> Celta y Getafe van en el mismo partido que Alavés y Rayo, así que tienes <b>$300 en el empate Alavés-Celta</b> y <b>$300 en Rayo-Getafe</b>. El grande sigue siendo <b>R. Sociedad $1,600</b> (paso 5; si no empata, la J10 es el tope). Partidos 17-19 oct.</div>
+  <div class="box alert">J9 neta: <b>−$900</b>. Los 3 nuevos debutaron 2-1 (Villarreal y Getafe cobraron, Celta no). El golpe fue <b>R. Sociedad −$1,600</b>. <b>⚠️ Para la J10, R. Sociedad apuesta el tope $3,200 (paso 6):</b> si no empata, se acepta la pérdida del tramo y reinicia a $100.</div>
+
+  <h2>🔜 Jornada 10 — montos (rivales por confirmar)</h2>
+  <ul class="nextlist">
+    <li><span><b>R. Sociedad</b> — paso 6 ⚠️ <b style="color:#ff8a80">TOPE</b></span><span class="amt b">$3,200</span></li>
+    <li><span><b>Alavés</b> — paso 3</span><span class="amt b">$400</span></li>
+    <li><span><b>Celta</b> — paso 2</span><span class="amt b">$200</span></li>
+    <li><span><b>Betis</b> — congelado (venía de saltarse)</span><span class="amt b">$200</span></li>
+    <li><span><b>Rayo · Villarreal · Getafe</b> — reinician paso 1</span><span class="amt b">$100 c/u</span></li>
+    <li><span><b>Sevilla</b> — congelado</span><span class="amt b">$100</span></li>
+  </ul>
+  <div class="box">J10 sumaría <b>$4,400</b> si se juegan todos (R.Soc $3,200 + Alavés $400 + Celta $200 + Betis $200 + Rayo/Villarreal/Getafe $300 + Sevilla $100). Pásame rivales y momios cuando salga el calendario; marcaré los que se saltan por Madrid/Barça y si dos de tus equipos vuelven a cruzarse.</div>
 
   <footer>
-    Empates por temporada: tablas finales de LaLiga 2024-25 y 2025-26 (Wikipedia). Rachas y ritmo por jornada son estimaciones basadas en la tasa de empate de cada equipo. Las probabilidades no garantizan resultados; ninguna apuesta es segura. Juega con responsabilidad.
+    Empates por temporada: tablas finales de LaLiga 2024-25 y 2025-26 (Wikipedia). Rachas y riesgo son estimaciones basadas en la tasa de empate de cada equipo. Progresión J1-J9 con resultados reales. Las probabilidades no garantizan resultados; ninguna apuesta es segura. Juega con responsabilidad.
   </footer>
 </div>
 </body>
