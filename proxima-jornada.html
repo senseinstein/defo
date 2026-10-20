@@ -26,8 +26,10 @@
   .bet .amt{font-size:20px;font-weight:800;color:var(--accent);white-space:nowrap}
   .bet.skip{opacity:.6}
   .bet.skip .amt{color:#6b7686;font-size:14px}
+  .bet.tope{border-color:#6b1e1e;background:#1a1012}
   .step{display:inline-block;font-size:10px;font-weight:700;padding:1px 7px;border-radius:5px;background:#0d2438;color:#7fb8ff;margin-left:4px}
   .step.hi{background:#2a230d;color:var(--warn)}
+  .step.tope{background:#2a0d0d;color:#ff8a80}
   .edge{display:inline-block;font-size:10px;font-weight:700;padding:1px 7px;border-radius:5px;margin-left:4px}
   .edge.a{background:#0d2a18;color:#7fe0a0}.edge.m{background:#1c2531;color:#9aa7b8}.edge.b{background:#2a0d0d;color:#ff8a80}
   h2{font-size:15px;margin:22px 0 8px}
@@ -50,68 +52,72 @@
   <div class="sub">Empate por equipo · marca cada apuesta al ponerla · reinicia al empatar, dobla al perder</div>
 
   <div class="jhead">
-    <div><div class="j">Jornada 9</div><div class="d">16-19 oct 2026</div></div>
-    <div class="tot"><div style="color:var(--mut);font-size:11px">TOTAL A APOSTAR</div><b>$2,300</b></div>
+    <div><div class="j">Jornada 10</div><div class="d">fecha por confirmar · rivales por confirmar</div></div>
+    <div class="tot"><div style="color:var(--mut);font-size:11px">TOTAL (si juegan todos)</div><b>$4,400</b></div>
+  </div>
+
+  <div class="box" style="background:#1a1012;border-color:#6b1e1e;color:#ff9a94">
+    <b>⚠️ R. Sociedad llega al TOPE en la J10.</b> Lleva 5 partidos sin empatar; esta jornada apuesta <b>$3,200 (paso 6)</b>. Si empata, recupera todo el tramo de golpe. Si NO empata, se acepta la pérdida del tramo (~$6,300 acumulado) y <b>reinicia a $100</b> — no se sube más. El tope existe justo para esto.
+  </div>
+
+  <div class="bet tope">
+    <div class="box" style="border-color:#6b1e1e"></div>
+    <div class="mid"><div class="tm">R. Sociedad <span class="step tope">paso 6 · TOPE</span></div>
+      <div class="mt">lleva 5 sin empatar · si no empata, acepta pérdida y reinicia a $100</div></div>
+    <div class="amt" style="color:#ff8a80">$3,200</div>
   </div>
 
   <div class="bet">
     <div class="box"></div>
-    <div class="mid"><div class="tm">R. Sociedad <span class="step hi">paso 5 ⚠️</span> <span class="edge m">parejo</span></div>
-      <div class="mt">@ Málaga (dom) · lleva 4 sin empatar · si NO empata, la J10 ya es el tope $3,200</div></div>
-    <div class="amt">$1,600</div>
+    <div class="mid"><div class="tm">Alavés <span class="step">paso 3</span></div>
+      <div class="mt">viene de perder J8 y J9 (racha 2)</div></div>
+    <div class="amt">$400</div>
   </div>
 
   <div class="bet">
     <div class="box"></div>
-    <div class="mid"><div class="tm">Alavés <span class="step">paso 2</span> <span class="edge a">buena ventaja</span></div>
-      <div class="mt">@ Celta (sáb 18) · +220 · mismo partido que tu Celta ↓</div></div>
+    <div class="mid"><div class="tm">Celta <span class="step">paso 2</span> <span class="edge a">empatador</span></div>
+      <div class="mt">perdió su debut J9 (2-1 vs Alavés); dobla a $200</div></div>
+    <div class="amt">$200</div>
+  </div>
+
+  <div class="bet">
+    <div class="box"></div>
+    <div class="mid"><div class="tm">Real Betis <span class="step">congelado</span> <span class="edge a">empatador</span></div>
+      <div class="mt">venía de saltarse (Barça en J9) · arranca J10 en $200</div></div>
     <div class="amt">$200</div>
   </div>
 
   <div class="bet">
     <div class="box" style="border-color:#3fb950"></div>
-    <div class="mid"><div class="tm">Celta <span class="step">paso 1</span> <span class="step" style="background:#12331d;color:#7fe0a0">➕ debut</span></div>
-      <div class="mt">vs Alavés (sáb 18) · +220 · paga $320 · <b style="color:#e3b341">mismo partido que Alavés = $300 en ese empate</b></div></div>
+    <div class="mid"><div class="tm">Rayo <span class="step">paso 1</span> <span class="edge a">empatador</span></div>
+      <div class="mt">empató en J9 (1-1 @ Getafe) → reinicia a $100</div></div>
+    <div class="amt">$100</div>
+  </div>
+
+  <div class="bet">
+    <div class="box" style="border-color:#3fb950"></div>
+    <div class="mid"><div class="tm">Villarreal <span class="step">paso 1</span></div>
+      <div class="mt">empató su debut (0-0 vs Elche) → reinicia a $100</div></div>
+    <div class="amt">$100</div>
+  </div>
+
+  <div class="bet">
+    <div class="box" style="border-color:#3fb950"></div>
+    <div class="mid"><div class="tm">Getafe <span class="step">paso 1</span> <span class="edge a">empatador</span></div>
+      <div class="mt">empató su debut (1-1 vs Rayo) → reinicia a $100</div></div>
     <div class="amt">$100</div>
   </div>
 
   <div class="bet">
     <div class="box"></div>
-    <div class="mid"><div class="tm">Rayo <span class="step">paso 1</span> <span class="edge a">buena ventaja</span></div>
-      <div class="mt">@ Getafe (dom 19) · +200 · mismo partido que tu Getafe ↓</div></div>
-    <div class="amt">$200</div>
-  </div>
-
-  <div class="bet">
-    <div class="box" style="border-color:#3fb950"></div>
-    <div class="mid"><div class="tm">Getafe <span class="step">paso 1</span> <span class="step" style="background:#12331d;color:#7fe0a0">➕ debut</span></div>
-      <div class="mt">vs Rayo (dom 19) · +200 · paga $300 · <b style="color:#e3b341">mismo partido que Rayo = $300 en ese empate</b></div></div>
+    <div class="mid"><div class="tm">Sevilla <span class="step">congelado</span></div>
+      <div class="mt">venía de saltarse (Madrid en J9) · arranca J10 en $100</div></div>
     <div class="amt">$100</div>
-  </div>
-
-  <div class="bet">
-    <div class="box" style="border-color:#3fb950"></div>
-    <div class="mid"><div class="tm">Villarreal <span class="step">paso 1</span> <span class="step" style="background:#12331d;color:#7fe0a0">➕ debut</span></div>
-      <div class="mt">vs <b>Elche</b> (vie 17) · +400 · paga $500 · partido aparte (boleta limpia)</div></div>
-    <div class="amt">$100</div>
-  </div>
-
-  <div class="bet skip">
-    <div class="box" style="border-color:#6b1e1e"></div>
-    <div class="mid"><div class="tm">Real Betis <span class="step" style="background:#2a0d0d;color:#ff8a80">SE SALTA</span></div>
-      <div class="mt">vs <b>Barcelona</b> (sáb) · rival grande → se congela en $200 para la J10</div></div>
-    <div class="amt">⊘</div>
-  </div>
-
-  <div class="bet skip">
-    <div class="box" style="border-color:#6b1e1e"></div>
-    <div class="mid"><div class="tm">Sevilla <span class="step" style="background:#2a0d0d;color:#ff8a80">SE SALTA</span></div>
-      <div class="mt">@ <b>Real Madrid</b> (dom) · rival grande → se congela en $100 para la J10</div></div>
-    <div class="amt">⊘</div>
   </div>
 
   <div class="box" style="background:#12251a;border-color:#1e6b3e;color:#a6e9c1">
-    <b>➕ J9 apostada con los 8 equipos: $2,300 en 6 boletas.</b> Villarreal (vs Elche, +400) es partido aparte. <b>Celta y Getafe los metiste por separado aunque juegan contra tu Alavés y tu Rayo</b> → mismo partido, así que tienes <b>$300 en el empate Alavés-Celta</b> y <b>$300 en Rayo-Getafe</b> (más concentrado en esos dos duelos). Tu decisión, queda registrado.
+    <b>Montos listos; faltan rivales.</b> Cuando salga el calendario de la J10 te confirmo: quién se <b>salta</b> por jugar vs Madrid/Barça (congela su monto), y si dos de tus equipos vuelven a <b>cruzarse</b> (mismo partido = una sola apuesta, no dobles). Pásame rivales y momios y marco cada boleta.
   </div>
 
   <div class="box rule">
@@ -119,11 +125,8 @@
     • Apuesta <b>el empate</b> de cada equipo con el monto indicado.<br>
     • Si un equipo enfrenta a <b>Real Madrid o Barcelona</b> → se salta (no se apuesta) y su monto se <b>congela</b> para su próximo partido. Contra <b>Atlético sí</b> se apuesta.<br>
     • Si <b>empata</b> → cobras y ese equipo <b>reinicia a $100</b>. Si <b>pierde/gana</b> (no empata) → el monto <b>se dobla</b> para la siguiente.<br>
-    • <b>Tope:</b> ningún equipo pasa del <b>paso 6 ($3,200)</b>. Si llega ahí sin empatar, aceptas la pérdida del tramo y reinicias a $100.
-  </div>
-
-  <div class="box">
-    <b>Leyenda de ventaja de empate:</b> <span class="edge a">buena</span> partido parejo / rival empatador · <span class="edge m">media</span> normal · <span class="edge b">baja</span> tu equipo es favorito o claro no-favorito. Es orientativa (según perfil de los equipos), no una garantía.
+    • <b>Tope:</b> ningún equipo pasa del <b>paso 6 ($3,200)</b>. Si llega ahí sin empatar, aceptas la pérdida del tramo y reinicias a $100.<br>
+    • <b>Cara a cara:</b> si dos de tus equipos juegan entre sí, el empate es un solo evento → una sola apuesta.
   </div>
 
   <div class="box">
