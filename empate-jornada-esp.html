@@ -16,7 +16,7 @@
   .intro{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:13px 15px;font-size:12.5px;color:var(--mut);margin-bottom:12px}
   .intro b{color:#fff}
   .scroll{overflow-x:auto;border:1px solid var(--line);border-radius:12px;margin-top:6px}
-  table{width:100%;border-collapse:collapse;font-size:13px;min-width:700px}
+  table{width:100%;border-collapse:collapse;font-size:13px;min-width:720px}
   th,td{padding:11px 10px;border-bottom:1px solid #1c232e;text-align:left;vertical-align:middle}
   th{color:var(--mut);font-size:10.5px;text-transform:uppercase;letter-spacing:.03em;background:#121824}
   .num{color:var(--mut);font-weight:700;width:26px}
@@ -25,20 +25,18 @@
   .match{font-weight:700;white-space:nowrap}
   .match .mine{color:#7fe0a0}
   .match .grande{color:#ff8a80}
-  .amt{font-weight:800;color:var(--accent);white-space:nowrap}
-  .amt small{display:block;color:var(--mut);font-weight:600;font-size:10.5px}
+  .match .sc{color:#fff;font-weight:800;margin:0 2px}
   .prob{white-space:nowrap;color:#cbd5e3}
   .probbar{display:inline-block;height:7px;border-radius:4px;background:var(--accent);vertical-align:middle;margin-right:7px}
   .chip{display:inline-block;font-size:10.5px;font-weight:800;padding:3px 9px;border-radius:6px;white-space:nowrap}
-  .ap{background:#0d2a18;color:#5ddc86;border:1px solid #1e6b3e}
-  .top{background:#0d2438;color:#7fb8ff;border:1px solid #1e4a6b}
+  .win{background:#0d2a18;color:#5ddc86;border:1px solid #1e6b3e}
+  .lose{background:#2a1416;color:#ff9a94;border:1px solid #6b1e1e}
   .tope{background:#2a0d0d;color:#ff8a80;border:1px solid #6b1e1e}
-  .dup{background:#241c10;color:#e3c98e;border:1px solid #4a3a13}
-  .skip{background:#2a0d0d;color:#ff8a80;border:1px solid #6b1e1e}
+  .skip{background:#1c2531;color:#9aa7b8;border:1px solid #2a3647}
   .none{background:#1c2531;color:#8a97a8;border:1px solid #2a3647}
   tr.rtope td{background:#1a1012}
-  tr.rdup td{background:#17140c}
-  tr.rnone td{opacity:.6}
+  tr.rwin td{background:#0f1e15}
+  tr.rnone td{opacity:.55}
   h2{font-size:15px;margin:24px 0 8px}
   .box{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:13px 15px;font-size:12.5px;margin-top:12px}
   .box b{color:#fff}
@@ -55,99 +53,95 @@
     <a href="empates-liga.html" style="padding:6px 11px;border:1px solid #2a3140;border-radius:8px;text-decoration:none;color:#9aa7b8;background:#161b22">📊 Empates liga</a>
   </nav>
 
-  <h1>🗓️ Orden por horario — Jornada 10 completa</h1>
-  <div class="sub">Los 10 partidos de la jornada en orden de juego · tus 8 equipos marcados en verde · 23-26 oct · hora de México</div>
+  <h1>🗓️ Orden por horario — Jornada 10 <span style="color:var(--mut);font-size:15px">(jugada)</span></h1>
+  <div class="sub">Los 10 partidos de la jornada, en orden de juego, con resultados · J10 cerró <b style="color:#ff9a94">−$1,560</b> · 23-26 oct</div>
 
   <div class="intro">
-    <b>Jornada completa</b>, en el orden en que ruedan los partidos. <span style="color:#7fe0a0">Verde</span> = tu equipo (lo apuestas, con su monto). <span style="color:#ff8a80">SALTAR</span> = grande vs grande (el Clásico), no se apuesta. <span style="color:#8a97a8">Gris / "no es tuyo"</span> = partido sin equipo tuyo, solo de referencia. <b>Esta jornada juegan tus 8 equipos</b> (ninguno enfrenta a Madrid/Barça). <b>Prob. empate</b> orientativa. <b>J10 ya apostada: $4,400.</b>
+    <b>Jornada completa</b> con resultados. <span style="color:#7fe0a0">Verde</span> = tu equipo empató (cobró). <span style="color:#ff9a94">Rojo</span> = tu equipo no empató. <span style="color:#ff8a80">TOPE</span> = R. Sociedad en el paso 6. <span style="color:#8a97a8">Gris</span> = partido sin equipo tuyo. <b>El balance y la progresión completa están en la <a href="index.html" style="color:#58a6ff">tabla principal</a>.</b>
   </div>
 
   <div class="scroll">
   <table>
-    <thead><tr><th class="num">#</th><th>Fecha y hora</th><th>Partido</th><th>Prob. empate</th><th>Tu apuesta / estado</th></tr></thead>
+    <thead><tr><th class="num">#</th><th>Fecha y hora</th><th>Partido · resultado</th><th>Prob. empate</th><th>Resultado tuyo</th></tr></thead>
     <tbody>
-      <tr>
+      <tr class="rwin">
         <td class="num">1</td><td class="dt"><b>Vie 23</b>13:00</td>
-        <td class="match"><span class="mine">Alavés</span> vs Málaga</td>
+        <td class="match"><span class="mine">Alavés</span> <span class="sc">1-1</span> Málaga</td>
         <td class="prob"><span class="probbar" style="width:56px"></span>28%</td>
-        <td><span class="chip ap">$400 · paso 3</span></td>
+        <td><span class="chip win">✅ $400 → +$1,040</span></td>
       </tr>
       <tr>
         <td class="num">2</td><td class="dt"><b>Sáb 24</b>06:00</td>
-        <td class="match"><span class="mine">Rayo</span> vs Elche</td>
+        <td class="match"><span class="mine">Rayo</span> <span class="sc">0-3</span> Elche</td>
         <td class="prob"><span class="probbar" style="width:54px"></span>27%</td>
-        <td><span class="chip ap">$100 · paso 1</span></td>
+        <td><span class="chip lose">❌ −$100</span></td>
       </tr>
       <tr class="rnone">
         <td class="num">3</td><td class="dt"><b>Sáb 24</b>08:15</td>
-        <td class="match">Racing vs Espanyol</td>
+        <td class="match">Racing <span class="sc">2-1</span> Espanyol</td>
         <td class="prob"><span class="probbar" style="width:52px"></span>~26%</td>
         <td><span class="chip none">no es tuyo</span></td>
       </tr>
       <tr>
         <td class="num">4</td><td class="dt"><b>Sáb 24</b>10:30</td>
-        <td class="match">Valencia vs <span class="mine">Villarreal</span></td>
+        <td class="match">Valencia <span class="sc">1-2</span> <span class="mine">Villarreal</span></td>
         <td class="prob"><span class="probbar" style="width:52px"></span>26%</td>
-        <td><span class="chip ap">$100 · paso 1</span></td>
+        <td><span class="chip lose">❌ −$100</span></td>
       </tr>
       <tr class="rnone">
         <td class="num">5</td><td class="dt"><b>Sáb 24</b>13:00</td>
-        <td class="match">Atlético vs Deportivo</td>
+        <td class="match">Atlético <span class="sc">1-0</span> Deportivo</td>
         <td class="prob"><span class="probbar" style="width:46px"></span>~23%</td>
         <td><span class="chip none">no es tuyo</span></td>
       </tr>
       <tr>
         <td class="num">6</td><td class="dt"><b>Dom 25</b>07:00</td>
-        <td class="match">Athletic vs <span class="mine">Getafe</span></td>
+        <td class="match">Athletic <span class="sc">4-0</span> <span class="mine">Getafe</span></td>
         <td class="prob"><span class="probbar" style="width:50px"></span>25%</td>
-        <td><span class="chip ap">$100 · paso 1</span></td>
+        <td><span class="chip lose">❌ −$100</span></td>
       </tr>
-      <tr class="rdup">
+      <tr class="rwin">
         <td class="num">7</td><td class="dt"><b>Dom 25</b>09:15</td>
-        <td class="match"><span class="mine">Celta</span> vs <span class="mine">Betis</span></td>
+        <td class="match"><span class="mine">Celta</span> <span class="sc">0-0</span> <span class="mine">Betis</span></td>
         <td class="prob"><span class="probbar" style="width:58px"></span>29%</td>
-        <td><span class="chip dup">$400 · cara a cara ×2</span></td>
+        <td><span class="chip win">✅✅ cara a cara → +$1,000</span></td>
       </tr>
       <tr class="rtope">
         <td class="num">8</td><td class="dt"><b>Dom 25</b>11:30</td>
-        <td class="match"><span class="mine">R. Sociedad</span> vs Levante</td>
+        <td class="match"><span class="mine">R. Sociedad</span> <span class="sc">2-1</span> Levante</td>
         <td class="prob"><span class="probbar" style="width:50px"></span>25%</td>
-        <td><span class="chip tope">$3,200 · ⚠️ TOPE</span></td>
+        <td><span class="chip tope">🔴 TOPE −$3,200</span></td>
       </tr>
       <tr class="rnone">
         <td class="num">9</td><td class="dt"><b>Dom 25</b>14:00</td>
-        <td class="match"><span class="grande">Barcelona vs Real Madrid</span> 🔥</td>
+        <td class="match"><span class="grande">Barcelona <span class="sc">1-2</span> Real Madrid</span> 🔥</td>
         <td class="prob"><span class="probbar" style="width:44px"></span>~22%</td>
         <td><span class="chip skip">SALTAR · Clásico</span></td>
       </tr>
       <tr>
         <td class="num">10</td><td class="dt"><b>Lun 26</b>14:00</td>
-        <td class="match"><span class="mine">Sevilla</span> vs Osasuna</td>
+        <td class="match"><span class="mine">Sevilla</span> <span class="sc">2-0</span> Osasuna</td>
         <td class="prob"><span class="probbar" style="width:62px"></span>31%</td>
-        <td><span class="chip top">$100 · TOP empate</span></td>
+        <td><span class="chip lose">❌ −$100</span></td>
       </tr>
     </tbody>
   </table>
   </div>
 
-  <div class="box">
-    <b>Tus apuestas de la jornada:</b> 8 boletas en 7 partidos (Celta y Betis caen en el mismo) = <b>$4,400</b>. Los otros 3 partidos (Racing-Espanyol, Atlético-Deportivo y el Clásico) no llevan equipo tuyo; el Clásico además se saltaría por ser grande vs grande.
-  </div>
-
   <div class="box alert">
-    <b>⚠️ Partido 8 — R. Sociedad en el tope $3,200.</b> Lleva 5 sin empatar; es el escalón máximo (paso 6). Si empata vs Levante, recupera todo el tramo de golpe (paga $12,800) y reinicia a $100. Si no, aceptas la pérdida del tramo (~$6,300) y también reinicia a $100 — no se sube más. Ojo: es local y favorita, y el favorito empata menos.
+    <b>🔴 Resumen J10: −$1,560.</b> Cobraste 3 empates: <b>Alavés</b> 1-1 (+$1,040) y el cara a cara <b>Celta 0-0 Betis</b> (+$1,000 por las dos). Pero <b>R. Sociedad tocó el tope y lo perdió</b> (2-1, −$3,200) y otros 4 no empataron. Saldo: $19,050 → <b>$17,490</b>. R. Sociedad reinicia a $100 — el tope hizo su trabajo.
   </div>
 
   <div class="box">
-    <b>Partido 7 — cara a cara.</b> Celta y Betis son <b>los dos tuyos</b> en el mismo partido → tienes <b>$400 en ese único empate</b> ($200 + $200). Si empatan, ganas las dos boletas; si no, pierdes las dos. Concentración, no diversificación.
+    <b>Dato curioso:</b> el mejor pronóstico de empate era <b>Sevilla-Osasuna (31%)</b>… y acabó 2-0. El que menos (el Clásico, 22%) no te tocaba. Como siempre: la prob. orienta, no garantiza.
   </div>
 
   <div class="box">
-    <b>Después de la jornada:</b> pásame los resultados y actualizo la <a href="index.html" style="color:var(--accent)">tabla principal</a> (progresión, rachas, montos y balance). Esta vista se arma igual para cada jornada nueva.
+    <b>Próxima jornada:</b> la <a href="proxima-jornada.html" style="color:var(--accent)">J11</a> ya tiene los montos (jornada barata, máx $1,200). Cuando salga el calendario te armo esta vista completa con rivales, horarios y prob. empate.
   </div>
 
   <footer>
-    Jornada completa en orden de horario, estrategia de empate por equipo. Horas en América/México (como en tus boletas); las de partidos sin equipo tuyo son convertidas de la hora de España y pueden ajustarse. Prob. empate orientativa (la de tus equipos sale del momio; las demás son estimadas). Ninguna apuesta es segura. Juega con responsabilidad.
+    Jornada completa en orden de horario, estrategia de empate por equipo. Resultados reales J10. Horas en América/México (las de partidos sin equipo tuyo, convertidas de España). Prob. empate orientativa. Ninguna apuesta es segura. Juega con responsabilidad.
   </footer>
 </div>
 </body>
