@@ -24,10 +24,14 @@
   .bet .tm{font-weight:800;font-size:15px}
   .bet .mt{color:var(--mut);font-size:12px;margin-top:2px}
   .bet .amt{font-size:20px;font-weight:800;color:var(--accent);white-space:nowrap}
+  .bet.skip{opacity:.7}
+  .bet.skip .amt{color:#6b7686;font-size:14px}
+  .bet.dup{border-color:#4a3a13}
   .step{display:inline-block;font-size:10px;font-weight:700;padding:1px 7px;border-radius:5px;background:#0d2438;color:#7fb8ff;margin-left:4px}
   .step.r{background:#0d2a18;color:#7fe0a0}
-  .edge{display:inline-block;font-size:10px;font-weight:700;padding:1px 7px;border-radius:5px;margin-left:4px}
-  .edge.a{background:#0d2a18;color:#7fe0a0}.edge.m{background:#1c2531;color:#9aa7b8}.edge.b{background:#2a0d0d;color:#ff8a80}
+  .tag{display:inline-block;font-size:10px;font-weight:800;padding:1px 7px;border-radius:5px;margin-left:4px}
+  .tag.cc{background:#241c10;color:#e3b341}
+  .tag.sk{background:#2a0d0d;color:#ff8a80}
   h2{font-size:15px;margin:22px 0 8px}
   .box{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:13px 15px;font-size:12.5px;margin-top:12px}
   .box b{color:#fff}
@@ -48,89 +52,85 @@
   <div class="sub">Empate por equipo · marca cada apuesta al ponerla · reinicia al empatar, dobla al perder</div>
 
   <div class="jhead">
-    <div><div class="j">Jornada 11</div><div class="d">fecha por confirmar · rivales por confirmar</div></div>
-    <div class="tot"><div style="color:var(--mut);font-size:11px">TOTAL (si juegan todos)</div><b>$1,200</b></div>
+    <div><div class="j">Jornada 11</div><div class="d">30 oct - 2 nov 2026</div></div>
+    <div class="tot"><div style="color:var(--mut);font-size:11px">TOTAL A APOSTAR</div><b>$1,100</b></div>
   </div>
 
-  <div class="box" style="background:#1a1012;border-color:#4a3a13;color:#e3c98e">
-    <b>La J10 cerró en −$1,560.</b> Se activó por primera vez el <b>tope de R. Sociedad</b> ($3,200, no empató → reinicia a $100). La buena: la J11 es una jornada <b>barata</b> (máximo $1,200) porque se limpió ese tope — ninguno viene arrastrando montos altos. Buen momento para recuperar.
-  </div>
-
-  <div class="bet">
-    <div class="box"></div>
-    <div class="mid"><div class="tm">Rayo <span class="step">paso 2</span> <span class="edge a">empatador</span></div>
-      <div class="mt">perdió J10 (0-3 vs Elche) · dobla a $200</div></div>
-    <div class="amt">$200</div>
-  </div>
-
-  <div class="bet">
-    <div class="box"></div>
-    <div class="mid"><div class="tm">Sevilla <span class="step">paso 2</span></div>
-      <div class="mt">perdió J10 (2-0 vs Osasuna) · dobla a $200</div></div>
-    <div class="amt">$200</div>
+  <div class="box" style="background:#241c10;border-color:#4a3a13;color:#e3c98e">
+    <b>⚠️ Ojo con esta jornada:</b> <b>Alavés se salta</b> (juega vs Barcelona → congela $100). Y hay <b>DOS cara a cara</b> entre equipos tuyos: <b>Rayo vs Celta</b> y <b>Getafe vs Sevilla</b>. En cada uno el empate es un solo evento; tú sueles apostar los dos lados, así que quedan <b>$300 en Rayo-Celta</b> y <b>$400 en Getafe-Sevilla</b> = $700 concentrados en 2 partidos.
   </div>
 
   <div class="bet">
     <div class="box"></div>
     <div class="mid"><div class="tm">Villarreal <span class="step">paso 2</span></div>
-      <div class="mt">perdió J10 (1-2 @ Valencia) · dobla a $200</div></div>
+      <div class="mt">vs Espanyol (vie 30) · venía de perder J10 · dobla a $200</div></div>
     <div class="amt">$200</div>
+  </div>
+
+  <div class="bet dup">
+    <div class="box"></div>
+    <div class="mid"><div class="tm">Rayo <span class="step">paso 2</span> <span class="tag cc">🔄 cara a cara</span></div>
+      <div class="mt">vs <b>Celta</b> (sáb 31) · mismo partido que tu Celta ↓</div></div>
+    <div class="amt">$200</div>
+  </div>
+
+  <div class="bet dup">
+    <div class="box"></div>
+    <div class="mid"><div class="tm">Celta <span class="step r">paso 1</span> <span class="tag cc">🔄 cara a cara</span></div>
+      <div class="mt">vs <b>Rayo</b> (sáb 31) · <b style="color:#e3b341">mismo partido que Rayo = $300 en ese empate</b></div></div>
+    <div class="amt">$100</div>
   </div>
 
   <div class="bet">
     <div class="box"></div>
-    <div class="mid"><div class="tm">Getafe <span class="step">paso 2</span> <span class="edge a">empatador</span></div>
-      <div class="mt">perdió J10 (0-4 @ Athletic) · dobla a $200</div></div>
+    <div class="mid"><div class="tm">Real Betis <span class="step r">paso 1</span></div>
+      <div class="mt">vs Málaga (sáb 31) · empató J10 · reinicia a $100</div></div>
+    <div class="amt">$100</div>
+  </div>
+
+  <div class="bet skip">
+    <div class="box" style="border-color:#6b1e1e"></div>
+    <div class="mid"><div class="tm">Alavés <span class="tag sk">SE SALTA</span></div>
+      <div class="mt">vs <b>Barcelona</b> (sáb 31) · rival grande → <b>se congela en $100</b> para la J12</div></div>
+    <div class="amt">⊘</div>
+  </div>
+
+  <div class="bet dup">
+    <div class="box"></div>
+    <div class="mid"><div class="tm">Getafe <span class="step">paso 2</span> <span class="tag cc">🔄 cara a cara</span></div>
+      <div class="mt">vs <b>Sevilla</b> (dom 1) · mismo partido que tu Sevilla ↓</div></div>
     <div class="amt">$200</div>
   </div>
 
-  <div class="bet">
-    <div class="box" style="border-color:#3fb950"></div>
-    <div class="mid"><div class="tm">Real Betis <span class="step r">paso 1</span> <span class="edge a">empatador</span></div>
-      <div class="mt">empató J10 (0-0 @ Celta) · reinicia a $100</div></div>
-    <div class="amt">$100</div>
-  </div>
-
-  <div class="bet">
-    <div class="box" style="border-color:#3fb950"></div>
-    <div class="mid"><div class="tm">Alavés <span class="step r">paso 1</span></div>
-      <div class="mt">empató J10 (1-1 vs Málaga, +$1,040) · reinicia a $100</div></div>
-    <div class="amt">$100</div>
-  </div>
-
-  <div class="bet">
-    <div class="box" style="border-color:#3fb950"></div>
-    <div class="mid"><div class="tm">Celta <span class="step r">paso 1</span> <span class="edge a">empatador</span></div>
-      <div class="mt">empató J10 (0-0 vs Betis) · reinicia a $100</div></div>
-    <div class="amt">$100</div>
+  <div class="bet dup">
+    <div class="box"></div>
+    <div class="mid"><div class="tm">Sevilla <span class="step">paso 2</span> <span class="tag cc">🔄 cara a cara</span></div>
+      <div class="mt">vs <b>Getafe</b> (dom 1) · <b style="color:#e3b341">mismo partido que Getafe = $400 en ese empate</b></div></div>
+    <div class="amt">$200</div>
   </div>
 
   <div class="bet">
     <div class="box" style="border-color:#5ddc86"></div>
     <div class="mid"><div class="tm">R. Sociedad <span class="step r">paso 1 ♻️</span></div>
-      <div class="mt">tocó el tope en J10 y lo perdió (2-1) · <b>reinició a $100</b> (se cortó la martingala)</div></div>
+      <div class="mt">vs Athletic (dom 1) · reinició tras el tope de la J10</div></div>
     <div class="amt">$100</div>
-  </div>
-
-  <div class="box" style="background:#12251a;border-color:#1e6b3e;color:#a6e9c1">
-    <b>Montos listos; faltan rivales.</b> Cuando salga el calendario de la J11 te confirmo: quién se <b>salta</b> por jugar vs Madrid/Barça (congela su monto), y si dos de tus equipos vuelven a <b>cruzarse</b> (mismo partido = una sola apuesta, no dobles). Pásame rivales y momios y marco cada boleta.
   </div>
 
   <div class="box rule">
     <b>📋 Reglas al apostar esta jornada:</b><br>
     • Apuesta <b>el empate</b> de cada equipo con el monto indicado.<br>
-    • Si un equipo enfrenta a <b>Real Madrid o Barcelona</b> → se salta (no se apuesta) y su monto se <b>congela</b> para su próximo partido. Contra <b>Atlético sí</b> se apuesta.<br>
-    • Si <b>empata</b> → cobras y ese equipo <b>reinicia a $100</b>. Si <b>pierde/gana</b> (no empata) → el monto <b>se dobla</b> para la siguiente.<br>
-    • <b>Tope:</b> ningún equipo pasa del <b>paso 6 ($3,200)</b>. Si llega ahí sin empatar, aceptas la pérdida del tramo y reinicias a $100 (le acaba de pasar a R. Sociedad).<br>
-    • <b>Cara a cara:</b> si dos de tus equipos juegan entre sí, el empate es un solo evento → una sola apuesta.
+    • Si un equipo enfrenta a <b>Real Madrid o Barcelona</b> → se salta (no se apuesta) y su monto se <b>congela</b>. Le toca a <b>Alavés</b> esta jornada (vs Barça). Contra <b>Atlético sí</b> se apuesta.<br>
+    • Si <b>empata</b> → cobras y ese equipo <b>reinicia a $100</b>. Si <b>no empata</b> → el monto <b>se dobla</b>.<br>
+    • <b>Cara a cara:</b> si dos de tus equipos juegan entre sí (Rayo-Celta, Getafe-Sevilla) el empate es un solo evento. Si apuestas los dos lados, concentras más en ese partido.<br>
+    • <b>Tope:</b> paso 6 ($3,200) máximo; si llega ahí sin empatar, se acepta la pérdida y reinicia a $100.
   </div>
 
   <div class="box">
-    <b>Después de la jornada:</b> avísame los resultados y momios para actualizar la <a href="index.html" style="color:var(--accent)">tabla de progresión</a>, las rachas, los montos y el balance en el sitio.
+    <b>Después de la jornada:</b> avísame los resultados para actualizar la <a href="index.html" style="color:var(--accent)">tabla de progresión</a>, las rachas, los montos y el balance.
   </div>
 
   <footer>
-    Solo estrategia de empate por equipo. La ventaja de empate es orientativa. Ninguna apuesta es segura. Juega con responsabilidad.
+    Solo estrategia de empate por equipo. Calendario J11 de LaLiga 2026-27 (verifica horarios el día previo). Ninguna apuesta es segura. Juega con responsabilidad.
   </footer>
 </div>
 </body>
